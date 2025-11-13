@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "com.meta.movement": {
-      "version": "file:C:/Users/Stephen/Downloads/Unity-Movement-71.0.1/Unity-Movement-71.0.1",
+      "version": "https://github.com/oculus-samples/Unity-Movement.git#v71.0.1",
       "depth": 0,
-      "source": "local",
+      "source": "git",
       "dependencies": {
         "com.meta.xr.sdk.core": "71.0.0",
         "com.meta.xr.sdk.interaction": "71.0.0",
@@ -11,7 +11,8 @@
         "com.unity.textmeshpro": "3.0.6",
         "com.unity.animation.rigging": "1.2.1",
         "com.unity.burst": "1.4.1"
-      }
+      },
+      "hash": "ee96eecc99eeed0be5847c7046e062d2cebb3435"
     },
     "com.meta.xr.mrutilitykit": {
       "version": "71.0.0",
