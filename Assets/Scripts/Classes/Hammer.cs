@@ -6,6 +6,7 @@ public class Hammer : MonoBehaviour
 {
     public GameObject hammer;
     private int NumofHits = 0;
+    private float hammerVel = 0.0f;
 
     public void SetHammer(GameObject hammer)
     {
@@ -19,22 +20,46 @@ public class Hammer : MonoBehaviour
     {
         return this.NumofHits;
     }
-    public void HammerHit(bool goodHit)
+
+    public float GetHammerVel()
     {
-        if (goodHit)
+        return this.hammerVel;
+    }
+
+    public void calculateHammerVel()
+    {
+        //calculate the hammer velocity
+    }
+    public void HammerHit(bool anvilHit, bool smithHit, bool goodHit)
+    {
+        if (anvilHit)
         {
-            //Play good hit sound
-            //Do changes to the sword game object
-            //Increase quality
-            //Increase # of hits
+            if (smithHit)
+            {
+                if (goodHit)
+                {
+                    //Play good hit sound
+                    //Do changes to the sword game object
+                    //Increase quality
+                    //Increase # of hits
+                }
+                else
+                {
+                    //Play bad hit sound
+                    //Do changes to sword game object
+                    //Decrease quality
+                    //Increase # of hits
+                }
+            }
+            else
+            {
+                //Play anvil hit sound
+            }
+           
+
         }
-        else
-        {
-            //Play bad hit sound
-            //Do changes to sword game object
-            //Decrease quality
-            //Increase # of hits
-        }
+      
+        
     }
 }
 
