@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Hammer : MonoBehaviour
 {
-    public GameObject hammer;
+   
     private int NumofHits = 0;
-    private float hammerVel = 0.0f;
+    private float hammerVel;
 
-    public void SetHammer(GameObject hammer)
+
+    public struct HitInfo
     {
-        this.hammer = hammer;
+        public bool anvilHit;
+        public float hammerVel;
     }
-    public GameObject GetHammer()
-    {
-        return this.hammer;
-    }
+
+   
     public int GetNumOfHits() //This can be used in our smithing script to check the amount of hits needed for the smithing to be done
     {
         return this.NumofHits;
@@ -30,36 +30,11 @@ public class Hammer : MonoBehaviour
     {
         //calculate the hammer velocity
     }
-    public void HammerHit(bool anvilHit, bool smithHit, bool goodHit)
+    public HitInfo HammerHit(bool anvilHit)
     {
-        if (anvilHit)
-        {
-            if (smithHit)
-            {
-                if (goodHit)
-                {
-                    //Play good hit sound
-                    //Do changes to the sword game object
-                    //Increase quality
-                    //Increase # of hits
-                }
-                else
-                {
-                    //Play bad hit sound
-                    //Do changes to sword game object
-                    //Decrease quality
-                    //Increase # of hits
-                }
-            }
-            else
-            {
-                //Play anvil hit sound
-            }
-           
+        if (anvilHit) NumofHits++;
 
-        }
-      
-        
+        return new HitInfo { anvilHit = anvilHit, hammerVel = hammerVel };
     }
 }
 

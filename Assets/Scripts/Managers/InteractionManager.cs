@@ -10,8 +10,7 @@ public class InteractionManager : MonoBehaviour
 
     public void Start()
     {
-        hammerClass = new Hammer();
-        hammerClass.SetHammer(hammer);
+      
     }
 
     public void Update()
