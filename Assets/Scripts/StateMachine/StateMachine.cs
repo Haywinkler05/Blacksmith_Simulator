@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private ForgeStage stage1;
+    private SmithingStage stage2;
+    private QualityStage stage3;
+    private FinishedStage stage4;
+    private string currentStage;
+
+    public void loadStage()
     {
-        
+        //We would load the stage here
     }
 
-    // Update is called once per frame
-    void Update()
+    public void deloadStage()
     {
-        
+        //Deload stage
     }
 }
