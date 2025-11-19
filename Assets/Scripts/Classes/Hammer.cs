@@ -1,18 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Hammer : MonoBehaviour
 {
-   
+    public event Action<HitInfo> onHammerHit;
     private int NumofHits = 0;
-    private float hammerVel;
-
-
+    private Vector3 hammerVel;
+    private Rigidbody rb;
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+    private void FixedUpdate()
+    {
+        if (rb != null) { 
+            hammerVel = rb.velocity; 
+        
+        
+        }
+    }
     public struct HitInfo
     {
         public bool anvilHit;
-        public float hammerVel;
+        public Vector3 hammerVel;
     }
 
    
@@ -21,20 +33,20 @@ public class Hammer : MonoBehaviour
         return this.NumofHits;
     }
 
-    public float GetHammerVel()
+    public Vector3 GetHammerVel()
     {
         return this.hammerVel;
     }
 
-    public void calculateHammerVel()
-    {
-        //calculate the hammer velocity
-    }
-    public HitInfo HammerHit(bool anvilHit)
-    {
-        if (anvilHit) NumofHits++;
 
-        return new HitInfo { anvilHit = anvilHit, hammerVel = hammerVel };
+    private void OnCollisionEnter(Collision collision)
+    {
+        bool anvilHit = collision.gameObject.CompareTag("Anvil");
+        NumofHits++;
+
+        HitInfo info = new HitInfo { anvilHit = anvilHit, hammerVel = hammerVel};
+        
+        onHammerHit?.Invoke(info);
     }
 }
 
