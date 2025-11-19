@@ -8,6 +8,7 @@ public class Hammer : MonoBehaviour
     public event Action<HitInfo> onHammerHit;
     private int NumofHits = 0;
     private Vector3 hammerVel;
+    [SerializeField]
     private Rigidbody rb;
     private void Start()
     {
