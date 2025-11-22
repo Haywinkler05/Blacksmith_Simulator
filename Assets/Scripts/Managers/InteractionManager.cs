@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO.IsolatedStorage;
 using UnityEngine;
 
 public class InteractionManager : MonoBehaviour
@@ -7,6 +8,7 @@ public class InteractionManager : MonoBehaviour
     Hammer hammerClass;
     public GameObject hammer;
     public GameObject anvil;
+    public float vel;
  
 
     public void Start()
@@ -24,8 +26,12 @@ public class InteractionManager : MonoBehaviour
     {
         if (info.anvilHit)
         {
-            anvil.GetComponent<AudioSource>().Play();
-          
+            vel = info.hammerVel.magnitude;
+            Debug.Log("The velocity is " + vel);
+            if (vel > 10f)
+            {
+                anvil.GetComponent<AudioSource>().Play();
+            }
         }
     }
     public void Update()
