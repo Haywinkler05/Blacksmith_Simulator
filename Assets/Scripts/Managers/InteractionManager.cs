@@ -7,6 +7,7 @@ public class InteractionManager : MonoBehaviour
     Hammer hammerClass;
     public GameObject hammer;
     public GameObject anvil;
+ 
 
     public void Start()
     {
@@ -24,6 +25,7 @@ public class InteractionManager : MonoBehaviour
         if (info.anvilHit)
         {
             anvil.GetComponent<AudioSource>().Play();
+          
         }
     }
     public void Update()
