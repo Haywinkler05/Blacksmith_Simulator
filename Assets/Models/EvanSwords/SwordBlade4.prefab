@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5246549735650602609
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      propertyPath: m_Name
+      value: SwordBlade4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 341897240460065248}
+  m_SourcePrefab: {fileID: 100100000, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+--- !u!4 &3192319976256063589 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7242381066219021844, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+  m_PrefabInstance: {fileID: 5246549735650602609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4205168521720667643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -966937658988219510, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+  m_PrefabInstance: {fileID: 5246549735650602609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4903880125639201568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+  m_PrefabInstance: {fileID: 5246549735650602609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &341897240460065248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903880125639201568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d6925267ec86d479b8f306b593034b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perfectMinScore: 85
+  goodMinScore: 70
+  okMinScore: 40
+  bladeBones:
+  - {fileID: 7412255398854150790}
+  - {fileID: 3192319976256063589}
+  - {fileID: 6262741333315463291}
+  - {fileID: 6680010522776564746}
+  - {fileID: 4205168521720667643}
+  goodMaxBend: 4
+  goodMinBends: 1
+  goodMaxBends: 2
+  okMaxBend: 10
+  okMinBends: 2
+  okMaxBends: 4
+  badMaxBend: 25
+  allowCrazyDirections: 1
+  testScore: 75
+--- !u!4 &6262741333315463291 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2172642811675084298, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+  m_PrefabInstance: {fileID: 5246549735650602609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6680010522776564746 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1475868970206124667, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+  m_PrefabInstance: {fileID: 5246549735650602609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7412255398854150790 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3319964556498035959, guid: 53ef0e173c3754e48a368438bfc9815c, type: 3}
+  m_PrefabInstance: {fileID: 5246549735650602609}
+  m_PrefabAsset: {fileID: 0}
