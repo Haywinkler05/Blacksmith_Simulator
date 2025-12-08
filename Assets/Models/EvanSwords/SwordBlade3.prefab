@@ -139,7 +139,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e0d1cda5aa75d0441b6063f4172d22fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3453787056803743802}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e0d1cda5aa75d0441b6063f4172d22fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3394193646710720857}
   m_SourcePrefab: {fileID: 100100000, guid: e0d1cda5aa75d0441b6063f4172d22fb, type: 3}
+--- !u!137 &2092656082656992564 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6320511716024203959, guid: e0d1cda5aa75d0441b6063f4172d22fb, type: 3}
+  m_PrefabInstance: {fileID: 5385298507341342595}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2310356464006625602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7686629178592059073, guid: e0d1cda5aa75d0441b6063f4172d22fb, type: 3}
@@ -194,6 +202,20 @@ MonoBehaviour:
   okMaxBends: 4
   badMaxBend: 25
   allowCrazyDirections: 1
+  testScore: 100
+--- !u!114 &3394193646710720857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5079222158279350994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7070ad6b03acca42b25dbcbb67c4b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swordRenderer: {fileID: 2092656082656992564}
   testScore: 100
 --- !u!4 &7942268947231853771 stripped
 Transform:

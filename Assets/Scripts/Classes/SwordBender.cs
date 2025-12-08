@@ -22,8 +22,8 @@ public class SwordBender : MonoBehaviour
 
     [Header("OK Sword Settings")]
     public float okMaxBend = 10f;
-    public int okMinBends = 2;
-    public int okMaxBends = 4;
+    public int okMinBends = 3;
+    public int okMaxBends = 5;
 
     [Header("Bad Sword Settings")]
     public float badMaxBend = 25f;
