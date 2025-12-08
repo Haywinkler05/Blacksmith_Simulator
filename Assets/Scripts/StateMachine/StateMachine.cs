@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
+    // State enum
     public enum GameState
     {
         Forge,
@@ -13,14 +14,15 @@ public class StateMachine : MonoBehaviour
     }
 
     [SerializeField] private GameState currentState;
-    [SerializeField] private GameObject forgeStage;
-    [SerializeField] private GameObject smithingStage;
-    [SerializeField] private GameObject quenchStage;
-    [SerializeField] private GameObject finishedStage;
 
-    private int currentBladeQuality = 0; //
+    // Reference to stage scripts
+    [SerializeField] private ForgeStage forgeStage;
+    [SerializeField] private SmithingStage smithingStage;
+    [SerializeField] private QualityStage quenchStage;
+    [SerializeField] private FinishedStage finishedStage;
 
-
+    // Current blade quality tracking
+    private int currentBladeQuality = 0;
 
     void Start()
     {
@@ -29,44 +31,63 @@ public class StateMachine : MonoBehaviour
 
     public void TransitionToState(GameState newState)
     {
-        // Deload current stage
-        DeloadCurrentStage();
+        // Deactivate current stage
+        DeactivateCurrentStage();
 
         // Set new state
         currentState = newState;
 
-        // Load new stage
-        LoadCurrentStage();
+        // Activate new stage
+        ActivateCurrentStage();
 
         Debug.Log($"Transitioned to: {currentState}");
     }
-    private void LoadCurrentStage()
+
+    private void ActivateCurrentStage()
     {
         switch (currentState)
         {
             case GameState.Forge:
-                if (forgeStage != null) forgeStage.SetActive(true);
+                if (forgeStage != null)
+                {
+                    forgeStage.enabled = true;
+                    forgeStage.StartStage(); // Call initialization method
+                }
                 break;
             case GameState.Smithing:
-                if (smithingStage != null) smithingStage.SetActive(true);
+                if (smithingStage != null)
+                {
+                    smithingStage.enabled = true;
+                    smithingStage.StartStage();
+                }
                 break;
             case GameState.Quench:
-                if (quenchStage != null) quenchStage.SetActive(true);
+                if (quenchStage != null)
+                {
+                    quenchStage.enabled = true;
+                    quenchStage.StartStage();
+                }
                 break;
             case GameState.Finished:
-                if (finishedStage != null) finishedStage.SetActive(true);
+                if (finishedStage != null)
+                {
+                    finishedStage.enabled = true;
+                    finishedStage.StartStage();
+                }
                 break;
         }
     }
 
-    private void DeloadCurrentStage()
+    private void DeactivateCurrentStage()
     {
-        // Disable all stages
-        if (forgeStage != null) forgeStage.SetActive(false);
-        if (smithingStage != null) smithingStage.SetActive(false);
-        if (quenchStage != null) quenchStage.SetActive(false);
-        if (finishedStage != null) finishedStage.SetActive(false);
+        // Disable all stage scripts
+        if (forgeStage != null) forgeStage.enabled = false;
+        if (smithingStage != null) smithingStage.enabled = false;
+        if (quenchStage != null) quenchStage.enabled = false;
+        if (finishedStage != null) finishedStage.enabled = false;
     }
+
+    // Called by stage scripts when they finish
     public void CompleteCurrentStage(int qualityScore)
     {
         currentBladeQuality = qualityScore;
@@ -83,19 +104,14 @@ public class StateMachine : MonoBehaviour
                 TransitionToState(GameState.Finished);
                 break;
             case GameState.Finished:
+                // Tell OrderSystem we completed an order
+                FindObjectOfType<OrderSystem>().CompleteOrder();
                 // Reset for next sword
                 TransitionToState(GameState.Forge);
                 break;
         }
     }
 
-    public int GetCurrentBladeQuality()
-    {
-        return currentBladeQuality;
-    }
-
-    public GameState GetCurrentState()
-    {
-        return currentState;
-    }
+    public int GetCurrentBladeQuality() => currentBladeQuality;
+    public GameState GetCurrentState() => currentState;
 }

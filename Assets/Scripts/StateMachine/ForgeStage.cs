@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class ForgeStage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private StateMachine stateMachine;
+
+    void Awake()
     {
-        
+        stateMachine = GetComponent<StateMachine>(); // Or FindObjectOfType
+        enabled = false; // Start disabled
     }
 
-    // Update is called once per frame
+    public void StartStage()
+    {
+        // Initialize the minigame
+        Debug.Log("Forge stage started!");
+    }
+
     void Update()
     {
-        
+        // Your forge minigame logic here
+
+        // When done:
+        // stateMachine.CompleteCurrentStage(qualityScore);
     }
+
 }
