@@ -139,6 +139,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c6f068c724c3de4cb03dd28219b7710, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3119022468408482113}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c6f068c724c3de4cb03dd28219b7710, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5068458947133565521}
   m_SourcePrefab: {fileID: 100100000, guid: 6c6f068c724c3de4cb03dd28219b7710, type: 3}
 --- !u!4 &122084129847931947 stripped
 Transform:
@@ -153,6 +156,11 @@ Transform:
 --- !u!4 &661145516428574078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6863164832868294549, guid: 6c6f068c724c3de4cb03dd28219b7710, type: 3}
+  m_PrefabInstance: {fileID: 6202020004758577899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2484905707578445872 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -833684045969902885, guid: 6c6f068c724c3de4cb03dd28219b7710, type: 3}
   m_PrefabInstance: {fileID: 6202020004758577899}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2760298363827838460 stripped
@@ -195,6 +203,20 @@ MonoBehaviour:
   badMaxBend: 25
   allowCrazyDirections: 1
   testScore: 56
+--- !u!114 &5068458947133565521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6544690700457172922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7070ad6b03acca42b25dbcbb67c4b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swordRenderer: {fileID: 2484905707578445872}
+  testScore: 28
 --- !u!4 &7200967003476830829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3890257973448788102, guid: 6c6f068c724c3de4cb03dd28219b7710, type: 3}
