@@ -328,6 +328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: iron_rod.fbx
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d35915c9187dabc479d80c6199459008, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

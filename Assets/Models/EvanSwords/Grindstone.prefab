@@ -68,6 +68,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grindstone
       objectReference: {fileID: 0}
+    - target: {fileID: 3022765078515980561, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022765078515980561, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022765078515980561, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022765078515980561, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022765078515980561, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022765078515980561, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022765078515980561, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4966409665695033816, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -75,5 +103,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -8375695456316572209, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 597375053741868337}
+    - targetCorrespondingSourceObject: {fileID: -8375695456316572209, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 855779194267279788}
   m_SourcePrefab: {fileID: 100100000, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+--- !u!1 &8812483323158705469 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8375695456316572209, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+  m_PrefabInstance: {fileID: 8182961081246288114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &597375053741868337
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812483323158705469}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6385160460782503386, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
+--- !u!114 &855779194267279788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812483323158705469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27813beea39dea943837c6fc64ff4922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpinSpeed: 720
+  accelerationTime: 3
+  decelerationTime: 3
+  spinAxis: {x: 0, y: 1, z: 0}
+  grindParticles: {fileID: 515408117430921674, guid: 45bc9744aef63d24f95e6bfa55009203, type: 3}
