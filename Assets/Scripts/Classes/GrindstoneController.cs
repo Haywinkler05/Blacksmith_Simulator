@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GrindstoneController : MonoBehaviour
 {
+    
     [Header("Spin Settings")]
+    public Transform axis;    // Drag your GrindstoneAxis object here
     public float maxSpinSpeed = 720f;
     public float accelerationTime = 3f;
     public float decelerationTime = 3f;
@@ -28,8 +30,11 @@ public class GrindstoneController : MonoBehaviour
             ? Mathf.MoveTowards(currentSpeed, maxSpinSpeed, accelRate * Time.deltaTime)
             : Mathf.MoveTowards(currentSpeed, 0f, decelRate * Time.deltaTime);
 
-        // Rotate around an arbitrary axis without reparenting
-        transform.Rotate(spinAxis.normalized, currentSpeed * Time.deltaTime, Space.World);
+        // Rotate around the reference pivot
+        if (axis != null)
+        {
+            transform.RotateAround(axis.position, spinAxis, currentSpeed * Time.deltaTime);
+        }
     }
 
     public void StartSpinning() => shouldSpin = true;
@@ -39,12 +44,17 @@ public class GrindstoneController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Sword"))
         {
+            Debug.Log("Colliding with sword");
+        }
+        if (collision.collider.CompareTag("Sword"))
+        {
             if (grindParticles != null) grindParticles.Play();
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
+       
         if (collision.collider.CompareTag("Sword"))
         {
             if (grindParticles != null) grindParticles.Stop();

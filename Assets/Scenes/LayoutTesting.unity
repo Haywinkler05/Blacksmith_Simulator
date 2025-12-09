@@ -5223,6 +5223,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 855779194267279788, guid: 5d07e8fe6ca143c4ba9b824f9a29bbf6, type: 3}
+      propertyPath: spinAxis.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 855779194267279788, guid: 5d07e8fe6ca143c4ba9b824f9a29bbf6, type: 3}
+      propertyPath: spinAxis.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 855779194267279788, guid: 5d07e8fe6ca143c4ba9b824f9a29bbf6, type: 3}
+      propertyPath: spinAxis.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6376168454573953507, guid: 5d07e8fe6ca143c4ba9b824f9a29bbf6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6376168454573953507, guid: 5d07e8fe6ca143c4ba9b824f9a29bbf6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6376168454573953507, guid: 5d07e8fe6ca143c4ba9b824f9a29bbf6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8504219701842636569, guid: 5d07e8fe6ca143c4ba9b824f9a29bbf6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.481
