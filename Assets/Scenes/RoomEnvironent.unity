@@ -18958,6 +18958,84 @@ Transform:
   - {fileID: 1690097731}
   m_Father: {fileID: 852685944}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1070423664
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1519164407}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.30133533
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.168
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.266
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_Name
+      value: Wanted Poster
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586607309129781981, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c9d5ef5d2dd2964088899219d97fa6e, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+--- !u!4 &1070423665 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a6c5ea2e336a6245a11737764bd5aa4, type: 3}
+  m_PrefabInstance: {fileID: 1070423664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1080643570
 GameObject:
   m_ObjectHideFlags: 0
@@ -27005,6 +27083,7 @@ Transform:
   - {fileID: 893974604}
   - {fileID: 760817381}
   - {fileID: 1054899230}
+  - {fileID: 1070423665}
   m_Father: {fileID: 782260426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1519164408
@@ -31200,6 +31279,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3564a9e66b52b7444a21023af6d3fff1, type: 3}
   crossfadeDuration: 5
   masterVolume: 1
+  crossfadeStartOffset: 5
 --- !u!1001 &1659112035
 PrefabInstance:
   m_ObjectHideFlags: 0
