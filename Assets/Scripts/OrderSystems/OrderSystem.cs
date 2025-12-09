@@ -9,6 +9,7 @@ public class OrderSystem : MonoBehaviour
     [SerializeField] private int numOrders = 0;
     [SerializeField] private int[] quality = { 1, 2, 3 };
     [SerializeField] private bool Finished = false;
+    private bool hasTriggeredNextDay = false;
 
     private List<int> currentOrders = new List<int>();
     [SerializeField] private int completeOrders = 0;
@@ -23,11 +24,12 @@ public class OrderSystem : MonoBehaviour
     void Update()
     {
         // Check if all orders are completed (use >= instead of ==)
-        if (numOrders > 0 && completeOrders >= numOrders)
+        if (numOrders > 0 && completeOrders >= numOrders && !hasTriggeredNextDay)
         {
             Finished = true;
+            hasTriggeredNextDay = true;
             StartCoroutine(NextDayDelay());
-            nextDay();
+            
         }
     }
 
@@ -75,6 +77,7 @@ public class OrderSystem : MonoBehaviour
     {
         dayCount++;
         Finished = false;
+        hasTriggeredNextDay = false;
         orderGen();
     }
 

@@ -49,7 +49,7 @@ public class orderUI : MonoBehaviour
         // Update number of orders
         if (numOrder != null)
         {
-            numOrder.text = $"Orders: {orderSystem.GetCompletedOrders()}/{orderSystem.GetNumOrders()}";
+            numOrder.text = $"{orderSystem.GetCompletedOrders()} orders completed out of {orderSystem.GetNumOrders()}";
         }
 
         // Update current order quality requirement
