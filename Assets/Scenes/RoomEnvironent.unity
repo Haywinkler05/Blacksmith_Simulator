@@ -33623,6 +33623,7 @@ GameObject:
   - component: {fileID: 1956320883}
   - component: {fileID: 1956320885}
   - component: {fileID: 1956320884}
+  - component: {fileID: 1956320886}
   m_Layer: 0
   m_Name: StateMachine
   m_TagString: Untagged
@@ -33680,9 +33681,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   forgeStage: {fileID: 1956320884}
-  smithingStage: {fileID: 0}
+  smithingStage: {fileID: 1956320886}
   quenchStage: {fileID: 0}
   finishedStage: {fileID: 0}
+--- !u!114 &1956320886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956320882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c80f3524d2a1548a52ddce3dd07925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beatAudio: {fileID: 0}
+  bpm: 100
+  perfectWindow: 0.05
+  goodWindow: 0.12
+  okWindow: 0.2
+  hitsRequired: 10
 --- !u!1 &1956426361
 GameObject:
   m_ObjectHideFlags: 0
