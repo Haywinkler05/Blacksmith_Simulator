@@ -560,6 +560,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e87d6f28d49dc6443959f210c80db5dd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1304245711338858799}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e87d6f28d49dc6443959f210c80db5dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7884489567445809268}
   m_SourcePrefab: {fileID: 100100000, guid: e87d6f28d49dc6443959f210c80db5dd, type: 3}
 --- !u!4 &3056538083473130947 stripped
 Transform:
@@ -687,6 +690,28 @@ MonoBehaviour:
   swordBender: {fileID: 3634494808574751484}
   swordBurn: {fileID: 1929866851426243471}
   quenchTime: 2
+--- !u!114 &7884489567445809268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5185165929835691316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f12c54cb1ce1814a91be4fc84d2b229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swordRenderer: {fileID: 1251479827267018995}
+  baseMaterial: {fileID: 2100000, guid: cc8a46d21da4ba64ab511c39c0efbc96, type: 2}
+  yellowMaterial: {fileID: 0}
+  orangeMaterial: {fileID: 0}
+  pinkMaterial: {fileID: 0}
+  maxForgeTime: 8
+  yellowTime: 2
+  orangeTime: 5
+  pinkTime: 7
+  penaltyPerSecond: 20
 --- !u!4 &5530060099879446414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e87d6f28d49dc6443959f210c80db5dd, type: 3}
@@ -795,6 +820,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d35915c9187dabc479d80c6199459008, type: 3}
+--- !u!23 &1251479827267018995 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1277527034751459559, guid: d35915c9187dabc479d80c6199459008, type: 3}
+  m_PrefabInstance: {fileID: 9159030452588068842}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8347985384905507515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d35915c9187dabc479d80c6199459008, type: 3}
