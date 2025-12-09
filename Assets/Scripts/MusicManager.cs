@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class MusicCrossfadeManager : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class MusicCrossfadeManager : MonoBehaviour
         // Start playing the first track
         if (musicTracks.Length > 0 && musicTracks[0] != null)
         {
-            currentSource.clip = musicTracks[0];
+            currentSource.clip = musicTracks[Random.Range(0,musicTracks.Length)];
             currentSource.volume = masterVolume;
             currentSource.Play();
         }

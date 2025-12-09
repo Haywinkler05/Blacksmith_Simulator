@@ -11750,6 +11750,7 @@ Transform:
   - {fileID: 858986369}
   - {fileID: 224296695}
   - {fileID: 1956320883}
+  - {fileID: 1652594250}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &746558955
@@ -26770,9 +26771,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orderSystem: {fileID: 224296696}
-  dayText: {fileID: 0}
-  numOrder: {fileID: 0}
-  quality: {fileID: 0}
+  dayText: {fileID: 1993010452}
+  numOrder: {fileID: 650479763}
+  quality: {fileID: 424035355}
 --- !u!1 &1520615441
 GameObject:
   m_ObjectHideFlags: 0
@@ -30797,6 +30798,58 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1652594249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652594250}
+  - component: {fileID: 1652594251}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1652594250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652594249}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 744503849}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1652594251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652594249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a80bd42a10f7d194aa70bbda8aed3a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicTracks:
+  - {fileID: 8300000, guid: bbbe2f9cfa1da844684545b029ea1c81, type: 3}
+  - {fileID: 8300000, guid: c3235c03509d12841b115560910d5850, type: 3}
+  - {fileID: 8300000, guid: 354e432a699d2404ca41a26f7d631a2d, type: 3}
+  - {fileID: 8300000, guid: ddb8bc862529ed24a9802bedb0d7bded, type: 3}
+  - {fileID: 8300000, guid: 88c81345ef38fe746b056913af05579e, type: 3}
+  crossfadeDuration: 5
+  masterVolume: 1
 --- !u!1001 &1659112035
 PrefabInstance:
   m_ObjectHideFlags: 0
