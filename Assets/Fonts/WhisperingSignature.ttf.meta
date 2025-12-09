@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d892633d9185b96468a6ba956c97a629
+guid: 7e101a327c8bf1c41b791901f11df5fd
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Dont Expect Demo
+  - Whispering Signature-Personal use
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
