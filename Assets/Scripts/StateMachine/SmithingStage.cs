@@ -15,12 +15,12 @@ public class SmithingStage : MonoBehaviour
     public void StartStage()
     {
         // Initialize the minigame
-        Debug.Log("Forge stage started!");
+        Debug.Log("smithing stage started!");
     }
 
     void Update()
     {
-        // Your forge minigame logic here
+        // Your smithing minigame logic here
 
         // When done:
         // stateMachine.CompleteCurrentStage(qualityScore);
