@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/RigSetup.unity
     guid: f2a940e5346b23f4abbfd67d46c7411f
-  - enabled: 0
-    path: Assets/Scenes/LayoutTesting.unity
-    guid: ecf831cca7116494b9cec38ba80c855d
   - enabled: 1
     path: Assets/Scenes/RoomEnvironent.unity
     guid: fe1a2e430fe465948bb8affcf1bfb169
