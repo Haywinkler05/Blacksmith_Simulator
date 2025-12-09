@@ -20,7 +20,7 @@ public class FinishedStage : MonoBehaviour
 
     void Update()
     {
-        // Your forge minigame logic here
+        // Your Finished minigame logic here
 
         // When done:
         // stateMachine.CompleteCurrentStage(qualityScore);

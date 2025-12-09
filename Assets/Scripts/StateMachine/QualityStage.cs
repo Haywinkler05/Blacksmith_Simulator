@@ -15,12 +15,12 @@ public class QualityStage : MonoBehaviour
     public void StartStage()
     {
         // Initialize the minigame
-        Debug.Log("Forge stage started!");
+        Debug.Log("Quality stage started!");
     }
 
     void Update()
     {
-        // Your forge minigame logic here
+        // Your quality minigame logic here
 
         // When done:
         // stateMachine.CompleteCurrentStage(qualityScore);
