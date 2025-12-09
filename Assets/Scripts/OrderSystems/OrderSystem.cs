@@ -8,6 +8,7 @@ public class OrderSystem : MonoBehaviour
     [SerializeField] private int dayCount = 0;
     [SerializeField] private int numOrders = 0;
     [SerializeField] private int[] quality = { 1, 2, 3 };
+    [SerializeField] private bool Finished = false;
 
     private List<int> currentOrders = new List<int>();
     [SerializeField] private int completeOrders = 0;
@@ -18,12 +19,14 @@ public class OrderSystem : MonoBehaviour
         completeOrders = 0;
         orderGen();
     }
-
+    
     void Update()
     {
         // Check if all orders are completed (use >= instead of ==)
         if (numOrders > 0 && completeOrders >= numOrders)
         {
+            Finished = true;
+            StartCoroutine(NextDayDelay());
             nextDay();
         }
     }
@@ -71,6 +74,7 @@ public class OrderSystem : MonoBehaviour
     void nextDay()
     {
         dayCount++;
+        Finished = false;
         orderGen();
     }
 
@@ -81,6 +85,7 @@ public class OrderSystem : MonoBehaviour
     }
 
     // Get methods for UI
+    public bool getFinished() { return Finished; }
     public int GetDayCount()
     {
         return dayCount;
@@ -102,7 +107,11 @@ public class OrderSystem : MonoBehaviour
             return currentOrders[orderIndex];
         return 1;
     }
-
+    private IEnumerator NextDayDelay()
+    {
+        yield return new WaitForSeconds(0.1f); // Small delay to let other scripts check Finished
+        nextDay();
+    }
     public List<int> GetAllOrderQualities()
     {
         return new List<int>(currentOrders); // Return a copy

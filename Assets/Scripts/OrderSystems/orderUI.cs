@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro; // Import TextMeshPro namespace
 
-public class UIManager : MonoBehaviour
+public class orderUI : MonoBehaviour
 {
     [Header("Managers")]
     [SerializeField] private OrderSystem orderSystem;
+    [SerializeField] private PlayerMoney playerEcon;
 
     [Header("Canvas 1: Day Status (Wall)")]
     [SerializeField] private TMP_Text dayText;
@@ -16,6 +17,9 @@ public class UIManager : MonoBehaviour
 
     [Header("Canvas 3: Current Order (Wall)")]
     [SerializeField] private TMP_Text quality;
+
+    [Header("Canvas 4: Player Money (Wall)")]
+    [SerializeField] private TMP_Text Money;
 
     private void Start()
     {
@@ -63,6 +67,11 @@ public class UIManager : MonoBehaviour
             {
                 quality.text = "All Orders Complete!";
             }
+        }
+        if (Money != null) {
+            float playerMoney = playerEcon.getAmount();
+            Money.text = $"You currently have {playerMoney} Francs";
+        
         }
     }
 

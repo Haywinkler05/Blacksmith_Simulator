@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+   [SerializeField] private PlayerMoney playerEcon;
+   [SerializeField] private OrderSystem orders;
+   
     void Start()
     {
-        
+        playerEcon = GetComponent<PlayerMoney>();
+        orders = GetComponent<OrderSystem>();
+        playerEcon.setAmount(0);
     }
 
     // Update is called once per frame
+
+    
     void Update()
     {
         
     }
-    //Order system
-        //Set number of orders a certain day
-        //Some orders have high quality expectations, or low quality.
-        //Timer to complete orders maybe?
+    
+    void tutorial()
+    {
 
+    }
     //Mini Game functions will be called from here
 
 
