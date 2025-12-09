@@ -14,7 +14,6 @@ public class SwordForge : MonoBehaviour
     public Material pinkMaterial;
 
     [Header("Timing Settings")]
-    public float maxForgeTime = 8f;        // Max allowed heating
     public float yellowTime = 2f;          // When the sword reaches yellow heat
     public float orangeTime = 5f;          // PERFECT heat moment
     public float pinkTime = 7f;            // Overheated / burned
@@ -23,7 +22,7 @@ public class SwordForge : MonoBehaviour
     public float penaltyPerSecond = 20f;   // How fast score drops from perfect
 
     private float forgeTimer = 0f;
-    private bool isForging = false;
+    private int isForging;
     private bool playerPickedUp = false;
 
     private float forgeScore = 0f;
@@ -38,17 +37,19 @@ public class SwordForge : MonoBehaviour
             Debug.LogError("SwordForge: No renderer assigned or found!");
 
         swordRenderer.material = baseMaterial;
+        // SAFE to access GamePhase now
+        isForging = GamePhase.Instance.Forge;
     }
 
 
     void Update()
     {
-        if (!isForging) return;
+        if (isForging == 0) return;
 
         forgeTimer += Time.deltaTime;
         UpdateHeatMaterial();
 
-        if (playerPickedUp || forgeTimer >= maxForgeTime)
+        if (playerPickedUp)
         {
             FinishForge();
         }
@@ -76,15 +77,14 @@ public class SwordForge : MonoBehaviour
 
     private void FinishForge()
     {
-        isForging = false;
-
+        
         float difference = Mathf.Abs(forgeTimer - orangeTime);
         forgeScore = Mathf.Clamp(100 - (difference * penaltyPerSecond), 0, 100);
-
+        forgeTimer = 0;
+        GamePhase.Instance.SetPhaseSmith();
         Debug.Log($"Forge Score: {forgeScore} (Timer {forgeTimer:F2}s)");
+        GamePhase.Instance.ForgePoints += forgeScore;
 
-        // Reset back to base
-        swordRenderer.material = baseMaterial;
     }
 
     // External call when the player grabs the sword out of the forge
@@ -111,7 +111,6 @@ public class SwordForge : MonoBehaviour
     {
         forgeTimer = 0f;
         playerPickedUp = false;
-        isForging = true;
 
         swordRenderer.material = baseMaterial;
     }

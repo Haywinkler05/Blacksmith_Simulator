@@ -13,6 +13,10 @@ public class GamePhase : MonoBehaviour
     public int Quench = 0;
     public int Grind = 0;
 
+    public float ForgePoints = 0;
+    public float SmithPoints = 0;
+  
+
     private void Awake()
     {
         // Basic singleton
