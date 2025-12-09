@@ -17408,8 +17408,16 @@ PrefabInstance:
       value: fi_vil_door04
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 633c2410da0cba549b65d3ffa938b50b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 633c2410da0cba549b65d3ffa938b50b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 633c2410da0cba549b65d3ffa938b50b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.85761
+      value: 13.892
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 633c2410da0cba549b65d3ffa938b50b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20539,8 +20547,8 @@ MonoBehaviour:
 
     a sword:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 74198fbefc2afe149b7c224c644f5b7d, type: 2}
-  m_sharedMaterial: {fileID: 4768055332993017861, guid: 74198fbefc2afe149b7c224c644f5b7d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24483,8 +24491,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Grind the \nsword to improve \nquality"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 74198fbefc2afe149b7c224c644f5b7d, type: 2}
-  m_sharedMaterial: {fileID: 4768055332993017861, guid: 74198fbefc2afe149b7c224c644f5b7d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30265,8 +30273,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Take the hot metal out \nand hammer \non beat"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 74198fbefc2afe149b7c224c644f5b7d, type: 2}
-  m_sharedMaterial: {fileID: 4768055332993017861, guid: 74198fbefc2afe149b7c224c644f5b7d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36758,8 +36766,8 @@ MonoBehaviour:
 
     bucket'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 74198fbefc2afe149b7c224c644f5b7d, type: 2}
-  m_sharedMaterial: {fileID: 4768055332993017861, guid: 74198fbefc2afe149b7c224c644f5b7d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36892,8 +36900,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Grab a bar from the \nbarrel and \nput it in the forge"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 74198fbefc2afe149b7c224c644f5b7d, type: 2}
-  m_sharedMaterial: {fileID: 4768055332993017861, guid: 74198fbefc2afe149b7c224c644f5b7d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
