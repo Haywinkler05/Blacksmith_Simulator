@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwordBlade3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0d1cda5aa75d0441b6063f4172d22fb, type: 3}
+      propertyPath: m_TagString
+      value: Sword
+      objectReference: {fileID: 0}
     - target: {fileID: 7686629178592059073, guid: e0d1cda5aa75d0441b6063f4172d22fb, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
