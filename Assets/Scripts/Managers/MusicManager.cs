@@ -10,11 +10,13 @@ public class MusicCrossfadeManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float crossfadeDuration = 5f;
     [SerializeField][Range(0f, 1f)] private float masterVolume = 1f;
+    [SerializeField] private float crossfadeStartOffset = 5f; // Start crossfade X seconds before track ends
 
     private AudioSource currentSource;
     private AudioSource nextSource;
     private int currentTrackIndex = 0;
     private bool isCrossfading = false;
+    private bool hasScheduledCrossfade = false;
 
     void Start()
     {
@@ -23,18 +25,20 @@ public class MusicCrossfadeManager : MonoBehaviour
         nextSource = gameObject.AddComponent<AudioSource>();
 
         // Configure AudioSources
-        currentSource.loop = true;
-        nextSource.loop = true;
+        currentSource.loop = false; // Changed to false so we can detect when it ends
+        nextSource.loop = false;
         currentSource.playOnAwake = false;
         nextSource.playOnAwake = false;
 
         // Start playing the first track
         if (musicTracks.Length > 0 && musicTracks[0] != null)
         {
-            currentTrackIndex = Random.Range(0, musicTracks.Length); // SET THE INDEX!
+            currentTrackIndex = Random.Range(0, musicTracks.Length);
             currentSource.clip = musicTracks[currentTrackIndex];
             currentSource.volume = masterVolume;
             currentSource.Play();
+
+            Debug.Log($"Started track {currentTrackIndex}: {musicTracks[currentTrackIndex].name}");
         }
     }
 
@@ -44,6 +48,18 @@ public class MusicCrossfadeManager : MonoBehaviour
         if (!isCrossfading)
         {
             currentSource.volume = masterVolume;
+        }
+
+        // Check if we should start crossfading before the track ends
+        if (currentSource.isPlaying && !isCrossfading && !hasScheduledCrossfade)
+        {
+            float timeRemaining = currentSource.clip.length - currentSource.time;
+
+            if (timeRemaining <= crossfadeStartOffset)
+            {
+                hasScheduledCrossfade = true;
+                CycleToNextTrack();
+            }
         }
 
         // Press Space to cycle to next track (for testing)
@@ -57,11 +73,26 @@ public class MusicCrossfadeManager : MonoBehaviour
     {
         if (isCrossfading || musicTracks.Length == 0) return;
 
-        // Move to next track index
-        currentTrackIndex = (currentTrackIndex + 1) % musicTracks.Length;
+        if (musicTracks.Length == 1)
+        {
+            // Only one track, restart it
+            currentSource.time = 0;
+            currentSource.Play();
+            return;
+        }
+
+        // Pick a random track that's NOT the current one
+        int nextTrackIndex;
+        do
+        {
+            nextTrackIndex = Random.Range(0, musicTracks.Length);
+        } while (nextTrackIndex == currentTrackIndex);
+
+        currentTrackIndex = nextTrackIndex;
 
         if (musicTracks[currentTrackIndex] != null)
         {
+            Debug.Log($"Crossfading to track {currentTrackIndex}: {musicTracks[currentTrackIndex].name}");
             StartCoroutine(CrossfadeToTrack(currentTrackIndex));
         }
     }
@@ -73,6 +104,7 @@ public class MusicCrossfadeManager : MonoBehaviour
         // Setup next track
         nextSource.clip = musicTracks[trackIndex];
         nextSource.volume = 0f;
+        nextSource.time = 0f; // Make sure it starts from the beginning
         nextSource.Play();
 
         float elapsed = 0f;
@@ -94,26 +126,24 @@ public class MusicCrossfadeManager : MonoBehaviour
         currentSource.Stop();
         currentSource.volume = masterVolume;
 
-        // Swap sources
+        // Swap sources (reusing the same two AudioSource components)
         AudioSource temp = currentSource;
         currentSource = nextSource;
         nextSource = temp;
 
         isCrossfading = false;
+        hasScheduledCrossfade = false; // Reset for next track
     }
 
-    // Public method to set master volume
     public void SetMasterVolume(float volume)
     {
         masterVolume = Mathf.Clamp01(volume);
-
         if (!isCrossfading)
         {
             currentSource.volume = masterVolume;
         }
     }
 
-    // Public method to trigger track change from UI or other scripts
     public void NextTrack()
     {
         CycleToNextTrack();

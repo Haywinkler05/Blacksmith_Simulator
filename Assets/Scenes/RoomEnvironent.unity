@@ -11810,7 +11810,6 @@ Transform:
   - {fileID: 1956320883}
   - {fileID: 1652594250}
   - {fileID: 526566335}
-  - {fileID: 792314977}
   - {fileID: 1615817557}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13574,52 +13573,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &792314976
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 792314977}
-  - component: {fileID: 792314978}
-  m_Layer: 0
-  m_Name: SellSwordManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &792314977
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792314976}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 744503849}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &792314978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792314976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b7b2d956c3b554985087666511ac18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orderSystem: {fileID: 0}
-  currentSwordQuality: 
 --- !u!1 &794409103
 GameObject:
   m_ObjectHideFlags: 0
@@ -27066,7 +27019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ad86413f03532458278bc7b89dc25b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderSystem: {fileID: 0}
+  orderSystem: {fileID: 1615817560}
   playerEcon: {fileID: 1615817558}
   dayText: {fileID: 1993010452}
   numOrder: {fileID: 650479763}
@@ -29456,6 +29409,7 @@ GameObject:
   - component: {fileID: 1615817559}
   - component: {fileID: 1615817558}
   - component: {fileID: 1615817560}
+  - component: {fileID: 1615817561}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -29520,7 +29474,25 @@ MonoBehaviour:
   dayCount: 0
   numOrders: 0
   quality: 010000000200000003000000
+  Finished: 0
   completeOrders: 0
+--- !u!114 &1615817561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615817556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b7b2d956c3b554985087666511ac18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderSystem: {fileID: 1615817560}
+  playerEcon: {fileID: 1615817558}
+  lowQualityPrice: 10
+  mediumQualityPrice: 25
+  highQualityPrice: 50
 --- !u!1 &1616949754
 GameObject:
   m_ObjectHideFlags: 0
@@ -31225,6 +31197,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 88c81345ef38fe746b056913af05579e, type: 3}
   - {fileID: 8300000, guid: de481ab9350bb4b42a1696a10508e256, type: 3}
   - {fileID: 8300000, guid: ce25a1c19418aec45a88bf2f4b239cae, type: 3}
+  - {fileID: 8300000, guid: 3564a9e66b52b7444a21023af6d3fff1, type: 3}
   crossfadeDuration: 5
   masterVolume: 1
 --- !u!1001 &1659112035
