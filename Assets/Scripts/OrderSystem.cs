@@ -94,4 +94,12 @@ public class OrderSystem : MonoBehaviour
             return currentOrders[orderIndex];
         return 1; 
     }
+
+    public int GetDayCount() { return dayCount; }
+
+    // Logic to let UI know how many we have finished
+    public int GetCompletedCount() { return completeOrders; }
+
+    // Logic to let UI see the whole list of orders
+    public List<int> GetOrderList() { return currentOrders; }
 }
