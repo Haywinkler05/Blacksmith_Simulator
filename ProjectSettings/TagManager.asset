@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Anvil
+  - QDSUITooltip
+  - QDSUISecondaryButton
+  - QDSUITextSecondaryColor
+  - QDSUIIcon
+  - QDSUIToggleBorderlessButton
+  - QDSUISharedThemeColor
+  - QDSUIAccentColor
+  - SkyboxCamera
   layers:
   - Default
   - TransparentFX
@@ -12,7 +20,7 @@ TagManager:
   - HiddenMesh
   - Water
   - UI
-  - 
+  - Pile
   - 
   - 
   - 
