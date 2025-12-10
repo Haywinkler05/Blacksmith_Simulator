@@ -28850,6 +28850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blacksmith(handfix)
       objectReference: {fileID: 0}
+    - target: {fileID: 3690867409266403720, guid: b92fd75cdc9e2524aa27a2305290c6de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4637884401633410725, guid: b92fd75cdc9e2524aa27a2305290c6de, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.026777618
@@ -28890,8 +28894,13 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.32755736
       objectReference: {fileID: 0}
+    - target: {fileID: 8880128987337654752, guid: b92fd75cdc9e2524aa27a2305290c6de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8880128987337654752, guid: b92fd75cdc9e2524aa27a2305290c6de, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b92fd75cdc9e2524aa27a2305290c6de, type: 3}
       insertIndex: -1
