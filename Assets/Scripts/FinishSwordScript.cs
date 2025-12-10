@@ -7,7 +7,7 @@ using UnityEngine;
 public class FinishSwordScript : MonoBehaviour
 {
     [SerializeField] OrderSystem complete;
-    [SerializeField] GamePhase gamePhase;
+
     [SerializeField] QualityCalculator quality;
 
     [SerializeField] float score;
@@ -38,6 +38,7 @@ public class FinishSwordScript : MonoBehaviour
                     other = null;
                     complete.CompleteOrder();
                     Destroy(other.gameObject);
+                    GamePhase.Instance.SetPhaseForge();
                 }
               
                 
