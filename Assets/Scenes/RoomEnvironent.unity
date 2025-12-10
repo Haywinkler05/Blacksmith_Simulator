@@ -37420,11 +37420,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordPrefabs:
-  - {fileID: 5185165929835691316, guid: 073f44911573de048a1879fa8a551972, type: 3}
-  - {fileID: 6544690700457172922, guid: 7c0578334a165804b84d9002c11ebae6, type: 3}
-  - {fileID: 5079222158279350994, guid: 6aea3adc5d88c074588d95d541ce22fa, type: 3}
-  - {fileID: 4903880125639201568, guid: 3c8755de835df96499b47aa977835888, type: 3}
-  - {fileID: 6174725593500146780, guid: 497d80e13ae419e489690aa7644ca49d, type: 3}
+  - {fileID: 112749039142944821, guid: f5669cdf18c91ac4ea0d90b3ae846346, type: 3}
+  - {fileID: 8753608209509178009, guid: 6cfbd701406829f4789193d2d63ccd60, type: 3}
+  - {fileID: 1558826111988553716, guid: b5cd1c9a752340f4ba1b180a44d9bbd0, type: 3}
+  - {fileID: 3605291644281297560, guid: 15786c4e5e96fac4c940ec70e2209421, type: 3}
+  - {fileID: 8348271538180447321, guid: dc4c8776fcdd2ce4b8fd8eaf1ff5bb26, type: 3}
   handTag: PlayerHand
   debugKey: 103
 --- !u!1 &1905117784
