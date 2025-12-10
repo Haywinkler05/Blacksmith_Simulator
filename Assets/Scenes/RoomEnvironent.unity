@@ -38090,6 +38090,7 @@ MonoBehaviour:
   - {fileID: 8348271538180447321, guid: dc4c8776fcdd2ce4b8fd8eaf1ff5bb26, type: 3}
   handTag: PlayerHand
   debugKey: 103
+  currentSpawnedSword: {fileID: 0}
 --- !u!1 &1905117784
 GameObject:
   m_ObjectHideFlags: 0
@@ -41540,6 +41541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   complete: {fileID: 1615817560}
+  spawn: {fileID: 1901361848}
   quality: {fileID: 1615817563}
   score: 0
 --- !u!65 &2088326672
