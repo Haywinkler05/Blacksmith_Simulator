@@ -38213,6 +38213,7 @@ MonoBehaviour:
   handTag: PlayerHand
   debugKey: 103
   currentSpawnedSword: {fileID: 0}
+  GamePhase: {fileID: 166885634}
 --- !u!1 &1905117784
 GameObject:
   m_ObjectHideFlags: 0

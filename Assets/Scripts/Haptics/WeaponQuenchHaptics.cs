@@ -4,7 +4,7 @@ using Oculus.Haptics;
 public class WeaponQuenchHaptics : MonoBehaviour
 {
     public HapticClip quenchClip;
-    public string weaponTag = "Weapon";
+    public string weaponTag = "Sword";
 
     private void OnTriggerEnter(Collider other)
     {
