@@ -5,8 +5,8 @@ public class SwordSmithing : MonoBehaviour
 {
     [Header("Global Settings")]
     public int targetHits = 10;            // Hits before penalty starts
-    public float minVelocity = 1.5f;       // Minimum velocity for scoring
-    public float maxVelocity = 5f;         // Max velocity for scaling score
+    public float minVelocity = .1f;       // Minimum velocity for scoring
+    public float maxVelocity = 1.5f;         // Max velocity for scaling score
     public float extraHitPenalty = 5f;     // Penalty per extra hit
     public float smithDuration = 30f;      // Duration of smithing stage in seconds
 
