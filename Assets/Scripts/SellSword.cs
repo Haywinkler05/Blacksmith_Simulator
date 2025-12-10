@@ -6,6 +6,7 @@ public class SellSword : MonoBehaviour
 {
     [SerializeField] private OrderSystem orderSystem;
     [SerializeField] private PlayerMoney playerEcon;
+    [SerializeField] private GamePhase gamePhase;
 
     [SerializeField] private int lowQualityPrice = 10;
     [SerializeField] private int mediumQualityPrice = 25;
@@ -13,6 +14,8 @@ public class SellSword : MonoBehaviour
 
     private bool hasReceivedPayment = false; // ADD THIS FLAG
 
+
+    
     void Update()
     {
         if (orderSystem.getFinished() && !hasReceivedPayment)
@@ -41,7 +44,7 @@ public class SellSword : MonoBehaviour
             totalEarnings += payment;
         }
 
-        playerEcon.increasePlayerMoney(5);
+        playerEcon.increasePlayerMoney(totalEarnings);
         Debug.Log($"Day complete! Earned ${totalEarnings} for {orderSystem.GetCompletedOrders()} swords");
     }
 

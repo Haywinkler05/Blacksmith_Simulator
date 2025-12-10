@@ -1,12 +1,16 @@
 using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FinishSwordScript : MonoBehaviour
 {
     [SerializeField] OrderSystem complete;
     [SerializeField] GamePhase gamePhase;
+    [SerializeField] QualityCalculator quality;
+
+    [SerializeField] float score;
     
     // Start is called before the first frame update
     void Start()
@@ -26,12 +30,17 @@ public class FinishSwordScript : MonoBehaviour
 
             if (other.gameObject.CompareTag("Sword"))
             {
-                complete.CompleteOrder();
-                other.gameObject.SetActive(false);
-                if (gamePhase.Finish == 1)
-                {
-                  
+                score = quality.CalculateScore();
+                int qualityCheck = quality.qualityLookup(score);
+                int index = complete.GetCompletedOrders();
+                int cmp = complete.GetOrderQuality(index);
+                if (cmp >= qualityCheck) {
+                    other = null;
+                    complete.CompleteOrder();
+                    Destroy(other.gameObject);
                 }
+              
+                
                 
             }
         }

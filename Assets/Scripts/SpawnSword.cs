@@ -37,7 +37,7 @@ public class SpawnSword : MonoBehaviour
         if (leftDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool leftPrimary) && leftPrimary)
             deletePressed = true;
 
-        if (deletePressed)
+        if (deletePressed || currentSpawnedSword == null)
         {
             if (!wasDeletePressed)
             {

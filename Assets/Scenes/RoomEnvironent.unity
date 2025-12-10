@@ -31211,6 +31211,7 @@ GameObject:
   - component: {fileID: 1615817560}
   - component: {fileID: 1615817561}
   - component: {fileID: 1615817562}
+  - component: {fileID: 1615817563}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -31291,6 +31292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderSystem: {fileID: 1615817560}
   playerEcon: {fileID: 1615817558}
+  gamePhase: {fileID: 1615817562}
   lowQualityPrice: 10
   mediumQualityPrice: 25
   highQualityPrice: 50
@@ -31313,6 +31315,21 @@ MonoBehaviour:
   Finish: 0
   ForgePoints: 0
   SmithPoints: 0
+--- !u!114 &1615817563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615817556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf634250f86409745b3eb470f6980da0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamePhase: {fileID: 1615817562}
+  ForgeScore: 0
+  SmithScore: 0
 --- !u!1 &1616949754
 GameObject:
   m_ObjectHideFlags: 0
@@ -40816,6 +40833,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   complete: {fileID: 1615817560}
   gamePhase: {fileID: 1615817562}
+  quality: {fileID: 0}
+  score: 0
 --- !u!65 &2088326672
 BoxCollider:
   m_ObjectHideFlags: 0
