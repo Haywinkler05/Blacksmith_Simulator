@@ -16,7 +16,7 @@ public class SpawnSword : MonoBehaviour
     public KeyCode debugKey = KeyCode.G;
 
     private GameObject currentHand;
-    private GameObject currentSpawnedSword;
+    public GameObject currentSpawnedSword;
     private bool isHandInside = false;
     private bool wasGripping = false;
     private bool wasDeletePressed = false;
@@ -103,7 +103,10 @@ public class SpawnSword : MonoBehaviour
             wasGripping = false;
         }
     }
+    public void deleteSword()
+    {
 
+    }
     private void OnTriggerEnter(Collider other)
     {
         // Check if the object entering is the hand
