@@ -291,6 +291,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e0d1cda5aa75d0441b6063f4172d22fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7988904727600762327}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e0d1cda5aa75d0441b6063f4172d22fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4488598541674289169}
   m_SourcePrefab: {fileID: 100100000, guid: e0d1cda5aa75d0441b6063f4172d22fb, type: 3}
 --- !u!1 &92653012520707881 stripped
 GameObject:
@@ -478,6 +481,22 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   goodHitSFX: {fileID: 8300000, guid: 472d7b103242b2d4ba20722e9bf748d2, type: 3}
   badHitSFX: {fileID: 8300000, guid: 51324cc0d4dc9f941849f513f3606f63, type: 3}
+--- !u!114 &4488598541674289169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5079222158279350994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490e61972802a7a4eb53dd23d340f81c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grindDuration: 6
+  smithGainPerSecond: 5
+  rebendThreshold: 10
+  swordBender: {fileID: 3453787056803743802}
 --- !u!4 &5563868623308111976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e0d1cda5aa75d0441b6063f4172d22fb, type: 3}
