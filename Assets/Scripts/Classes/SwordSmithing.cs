@@ -4,21 +4,22 @@ using UnityEngine;
 public class SwordSmithing : MonoBehaviour
 {
     [Header("Global Settings")]
-    public int targetHits = 10;                // Hits before penalty starts
-    public float minVelocity = 1.5f;          // Minimum velocity for scoring
-    public float maxVelocity = 5f;            // Max velocity for scaling score
-    public float extraHitPenalty = 5f;        // Penalty per extra hit
+    public int targetHits = 10;            // Hits before penalty starts
+    public float minVelocity = 1.5f;       // Minimum velocity for scoring
+    public float maxVelocity = 5f;         // Max velocity for scaling score
+    public float extraHitPenalty = 5f;     // Penalty per extra hit
+    public float smithDuration = 30f;      // Duration of smithing stage in seconds
 
     [Header("Scoring")]
-    public float maxHitScore = 10;         // Max score for one hit
+    public float maxHitScore = 10f;        // Max score for one hit
 
     private float smithScore = 0f;
     private bool isSmithing = false;
     private int hitCount = 0;
+    private float smithTimer = 0f;
 
-    [Header("Audio")]
-    public AudioSource audioSource;           // Whistle audio source
-    public AudioClip whistleClip;             // Whistle plays once
+    [Header("Audio SFX")]
+    public AudioSource audioSource;        // Optional hammer SFX source
     public AudioClip goodHitSFX;
     public AudioClip badHitSFX;
 
@@ -26,8 +27,11 @@ public class SwordSmithing : MonoBehaviour
     {
         if (!isSmithing || GamePhase.Instance.Smith == 0) return;
 
-        // Smithing ends automatically if whistle finished
-        if (audioSource != null && !audioSource.isPlaying && audioSource.clip == whistleClip)
+        // Update smithing timer
+        smithTimer += Time.deltaTime;
+
+        // End smithing automatically when duration finishes
+        if (smithTimer >= smithDuration)
         {
             FinishSmithing();
         }
@@ -64,6 +68,8 @@ public class SwordSmithing : MonoBehaviour
 
     private void FinishSmithing()
     {
+        if (!isSmithing) return;
+
         isSmithing = false;
 
         // Clamp final score between 0 and 100
@@ -72,10 +78,7 @@ public class SwordSmithing : MonoBehaviour
 
         Debug.Log($"SMITHING FINISHED | Total Score: {smithScore}");
 
-        // Stop audio if still playing
-        if (audioSource != null && audioSource.isPlaying)
-            audioSource.Stop();
-
+        // Trigger next game phase
         GamePhase.Instance.SetPhaseQuench();
     }
 
@@ -93,14 +96,9 @@ public class SwordSmithing : MonoBehaviour
         isSmithing = true;
         smithScore = 0f;
         hitCount = 0;
+        smithTimer = 0f;
 
-        // Play whistle once
-        if (audioSource != null && whistleClip != null)
-        {
-            audioSource.clip = whistleClip;
-            audioSource.loop = false;
-            audioSource.Play();
-        }
+        // Audio handled by anvil; no local audio playback needed here
     }
 
     private void PlaySFX(AudioClip clip)
