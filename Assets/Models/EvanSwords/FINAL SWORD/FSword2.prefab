@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 1897139153963275485}
   - component: {fileID: 6544641686599841156}
   - component: {fileID: 6546390626573944237}
+  - component: {fileID: 4757674049149560171}
   m_Layer: 0
   m_Name: FSword2
   m_TagString: Sword
@@ -257,6 +258,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4757674049149560171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330142130623313222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9dc93c7e1ae142448d4a122be86ea8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 0}
+  _controller: 2
+  _loop: 0
+  _amplitude: 1
+  _frequencyShift: 0
+  _priority: 128
 --- !u!1001 &4651787711511237367
 PrefabInstance:
   m_ObjectHideFlags: 0
