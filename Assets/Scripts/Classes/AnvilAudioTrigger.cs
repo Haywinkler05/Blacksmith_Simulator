@@ -1,21 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnvilAudioTrigger : MonoBehaviour
 {
     [Header("Audio")]
-    public AudioSource audioSource;   // Attach the AudioSource from the anvil
-    public AudioClip whistleClip;     // The 30-second smithing tune
+    public AudioSource audioSource;
+    public AudioClip whistleClip;
 
     private bool isPlaying = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        // Only trigger if a sword enters
         if (other.CompareTag("Sword") && !isPlaying)
         {
-            StartAudio();
+            if (GamePhase.Instance.Smith == 1)
+            {
+                StartAudio();
+            }
         }
     }
 
@@ -30,13 +30,17 @@ public class AnvilAudioTrigger : MonoBehaviour
         }
     }
 
-    // Optional: stop audio manually if needed
     public void StopAudio()
     {
-        if (audioSource != null && audioSource.isPlaying)
+        if (audioSource != null)
         {
             audioSource.Stop();
-            isPlaying = false;
         }
+        isPlaying = false;
+    }
+
+    public void ResetAudioFlag()
+    {
+        isPlaying = false;
     }
 }

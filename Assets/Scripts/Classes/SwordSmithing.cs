@@ -79,6 +79,7 @@ public class SwordSmithing : MonoBehaviour
         Debug.Log($"SMITHING FINISHED | Total Score: {smithScore}");
 
         // Trigger next game phase
+        FindAnyObjectByType<AnvilAudioTrigger>()?.ResetAudioFlag();
         GamePhase.Instance.SetPhaseQuench();
     }
 
