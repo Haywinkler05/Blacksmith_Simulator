@@ -21,6 +21,7 @@ TagManager:
   - PlayerHand
   - GrindStone
   - Sell
+  - Hammer
   layers:
   - Default
   - TransparentFX

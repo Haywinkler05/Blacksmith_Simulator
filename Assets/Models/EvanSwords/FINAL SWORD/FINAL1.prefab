@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112749039142944821}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.412, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -312,8 +312,54 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2633229422156702951, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3194194559294831509}
+    - targetCorrespondingSourceObject: {fileID: 2633229422156702951, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4783050051825331436}
   m_SourcePrefab: {fileID: 100100000, guid: 073f44911573de048a1879fa8a551972, type: 3}
+--- !u!1 &4138635798602363479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2633229422156702951, guid: 073f44911573de048a1879fa8a551972, type: 3}
+  m_PrefabInstance: {fileID: 2153986580298684080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3194194559294831509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138635798602363479}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.4595691, y: 0.04399464, z: 0.055662036}
+  m_Center: {x: -0.000338046, y: -0.000000002229517, z: 0.028587641}
+--- !u!114 &4783050051825331436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138635798602363479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db4c00e1e081b94dbfbd19a41bbe1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hammerClip: {fileID: 2460798210113038985, guid: 65d13e16188f60f43902691966537bb9, type: 3}
+  hammerTag: Hammer
 --- !u!4 &5862216932304449854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
