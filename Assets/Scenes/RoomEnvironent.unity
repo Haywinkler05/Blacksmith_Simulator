@@ -16061,10 +16061,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 685752357989799141, guid: 3a466e0517f59a142aebb12fad725c9f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1421028173}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a466e0517f59a142aebb12fad725c9f, type: 3}
 --- !u!4 &849299614 stripped
 Transform:
@@ -27719,24 +27716,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 73046130}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1421028170 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 685752357989799141, guid: 3a466e0517f59a142aebb12fad725c9f, type: 3}
-  m_PrefabInstance: {fileID: 849299613}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1421028173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421028170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07510026f156ed446b544edebbfde108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forgeClip: {fileID: 2460798210113038985, guid: 66d0557c54fc9ba4ab6225619694f410, type: 3}
 --- !u!1 &1427986792
 GameObject:
   m_ObjectHideFlags: 0
