@@ -17,6 +17,7 @@ TagManager:
   - LeftHand
   - RightHand
   - Forge
+  - Smith
   layers:
   - Default
   - TransparentFX
