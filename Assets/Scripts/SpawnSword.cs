@@ -20,6 +20,7 @@ public class SpawnSword : MonoBehaviour
     private bool isHandInside = false;
     private bool wasGripping = false;
     private bool wasDeletePressed = false;
+    [SerializeField]private GamePhase GamePhase;
 
     // Update is called once per frame
     void Update()
@@ -45,6 +46,7 @@ public class SpawnSword : MonoBehaviour
                 {
                     Destroy(currentSpawnedSword);
                     currentSpawnedSword = null;
+                    GamePhase.Instance.SetPhaseForge();
                     Debug.Log("Sword destroyed via input.");
                 }
                 wasDeletePressed = true;
