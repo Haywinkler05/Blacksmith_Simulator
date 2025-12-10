@@ -23,8 +23,13 @@ public class GamePhase : MonoBehaviour
         // Basic singleton
         if (Instance == null)
             Instance = this;
-        else
-            Destroy(gameObject);
+        else if (Instance != this)
+        {
+            // Only destroy THIS component, not the entire GameObject
+            Debug.LogWarning($"Duplicate GamePhase found on {gameObject.name}. Destroying duplicate component only.");
+            Destroy(this);
+            return;
+        }
     }
 
     // Helper to reset all to zero

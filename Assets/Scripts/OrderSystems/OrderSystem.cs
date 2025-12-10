@@ -73,6 +73,11 @@ public class OrderSystem : MonoBehaviour
 
         Debug.Log($"Day {dayCount + 1} - Orders: {numOrders} - Quality Reqs: {string.Join(", ", currentOrders)}");
     }
+    void OnDestroy()
+    {
+        Debug.LogError($"?? OrderSystem on {gameObject.name} is being DESTROYED! Check what's destroying it!");
+        Debug.LogError($"Stack trace: {System.Environment.StackTrace}");
+    }
 
     void nextDay()
     {
