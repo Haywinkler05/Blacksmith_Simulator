@@ -11,6 +11,7 @@ public class OrderSystem : MonoBehaviour
     [SerializeField] private bool Finished = false;
     private bool hasTriggeredNextDay = false;
 
+   
     private List<int> currentOrders = new List<int>();
     [SerializeField] private int completeOrders = 0;
 

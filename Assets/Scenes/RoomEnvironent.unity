@@ -425,6 +425,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 594214fa1d447b947b86a6263f5b8e3c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2088326670}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 594214fa1d447b947b86a6263f5b8e3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2088326672}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 594214fa1d447b947b86a6263f5b8e3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2088326671}
   m_SourcePrefab: {fileID: 100100000, guid: 594214fa1d447b947b86a6263f5b8e3c, type: 3}
 --- !u!4 &13626560 stripped
 Transform:
@@ -14064,7 +14070,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -31204,6 +31210,7 @@ GameObject:
   - component: {fileID: 1615817558}
   - component: {fileID: 1615817560}
   - component: {fileID: 1615817561}
+  - component: {fileID: 1615817562}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -31287,6 +31294,25 @@ MonoBehaviour:
   lowQualityPrice: 10
   mediumQualityPrice: 25
   highQualityPrice: 50
+--- !u!114 &1615817562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615817556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a332e39914e5ca846833bc465d545358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Forge: 0
+  Smith: 0
+  Quench: 0
+  Grind: 0
+  Finish: 0
+  ForgePoints: 0
+  SmithPoints: 0
 --- !u!1 &1616949754
 GameObject:
   m_ObjectHideFlags: 0
@@ -40771,11 +40797,46 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2088326671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088326667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bcc7ec4204496c40a124c8774c08ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  complete: {fileID: 1615817560}
+  gamePhase: {fileID: 1615817562}
+--- !u!65 &2088326672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088326667}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000026, y: 0.93522966, z: 1.9109654}
+  m_Center: {x: -0.000014469031, y: 0.46761322, z: 0.0133391945}
 --- !u!1 &2097403643
 GameObject:
   m_ObjectHideFlags: 0
