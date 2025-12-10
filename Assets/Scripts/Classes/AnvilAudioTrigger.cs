@@ -41,6 +41,6 @@ public class AnvilAudioTrigger : MonoBehaviour
 
     public void ResetAudioFlag()
     {
-        isPlaying = true;
+        isPlaying = false;
     }
 }
