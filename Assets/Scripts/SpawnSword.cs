@@ -19,10 +19,42 @@ public class SpawnSword : MonoBehaviour
     private GameObject currentSpawnedSword;
     private bool isHandInside = false;
     private bool wasGripping = false;
+    private bool wasDeletePressed = false;
 
     // Update is called once per frame
     void Update()
     {
+        // Check for Delete Input
+        // User requested "X on Right Controller". On Quest, X is on Left, A is on Right (both are Primary).
+        // We will check Primary Button on BOTH hands to cover all bases.
+        bool deletePressed = false;
+        
+        InputDevice rightDevice = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        if (rightDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool rightPrimary) && rightPrimary)
+            deletePressed = true;
+
+        InputDevice leftDevice = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+        if (leftDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool leftPrimary) && leftPrimary)
+            deletePressed = true;
+
+        if (deletePressed)
+        {
+            if (!wasDeletePressed)
+            {
+                if (currentSpawnedSword != null)
+                {
+                    Destroy(currentSpawnedSword);
+                    currentSpawnedSword = null;
+                    Debug.Log("Sword destroyed via input.");
+                }
+                wasDeletePressed = true;
+            }
+        }
+        else
+        {
+            wasDeletePressed = false;
+        }
+
         if (isHandInside && currentHand != null)
         {
             bool grabPressed = false;
