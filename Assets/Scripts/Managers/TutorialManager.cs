@@ -49,21 +49,6 @@ public class TutorialManager : MonoBehaviour
                 PlayVoiceLine(0);
                 hasPlayedVoiceLine = true;
             }
-            else if (GamePhase.Instance.Smith == 1)
-            {
-                PlayVoiceLine(1);
-                hasPlayedVoiceLine = true;
-            }
-            else if (GamePhase.Instance.Quench == 1)
-            {
-                PlayVoiceLine(2);
-                hasPlayedVoiceLine = true;
-            }
-            else if (GamePhase.Instance.Grind == 1)
-            {
-                PlayVoiceLine(3);
-                hasPlayedVoiceLine = true;
-            }
         }
     }
 
