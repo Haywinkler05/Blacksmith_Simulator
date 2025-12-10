@@ -16,6 +16,7 @@ public class SpawnSword : MonoBehaviour
     public KeyCode debugKey = KeyCode.G;
 
     private GameObject currentHand;
+    private GameObject currentSpawnedSword;
     private bool isHandInside = false;
     private bool wasGripping = false;
 
@@ -99,6 +100,13 @@ public class SpawnSword : MonoBehaviour
     /// <param name="hand">The hand GameObject to attach the sword to.</param>
     public void SpawnRandomSword(GameObject hand)
     {
+        // Check if a sword already exists
+        if (currentSpawnedSword != null)
+        {
+            Debug.Log("Cannot spawn new sword: Previous sword still exists.");
+            return;
+        }
+
         if (swordPrefabs != null && swordPrefabs.Length > 0 && hand != null)
         {
             int randomIndex = Random.Range(0, swordPrefabs.Length);
@@ -108,18 +116,12 @@ public class SpawnSword : MonoBehaviour
             {
                 // Instantiate the prefab at the hand's position and rotation
                 GameObject spawnedSword = Instantiate(prefabToSpawn, hand.transform.position, hand.transform.rotation);
+                currentSpawnedSword = spawnedSword;
                 
-                // Parent it to the hand so it moves with it
-                spawnedSword.transform.SetParent(hand.transform);
+                // We do not parent the sword or set it to kinematic.
+                // This allows existing grab mechanics to interact with it, or for it to fall naturally.
 
-                // If the sword has a Rigidbody, set it to kinematic so it doesn't fall immediately
-                Rigidbody rb = spawnedSword.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    rb.isKinematic = true;
-                }
-
-                Debug.Log("Spawned " + spawnedSword.name + " in hand " + hand.name);
+                Debug.Log("Spawned " + spawnedSword.name + " at " + hand.name);
             }
             else
             {
