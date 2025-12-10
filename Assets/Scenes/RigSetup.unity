@@ -2407,7 +2407,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: fi_vil_forge_coolingbath_large2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4451089436782452795, guid: 834791d8cefc01c4aaecb3bd87c1698a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2438,7 +2439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quenchClip: {fileID: 2460798210113038985, guid: d80257baad26e2243ba1f715b0974889, type: 3}
-  weaponTag: Weapon
+  weaponTag: Sword
 --- !u!1 &177495795
 GameObject:
   m_ObjectHideFlags: 0
@@ -19094,12 +19095,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: c57d6b3dda143104c925f573e7a7fe7c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1109278590}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: c57d6b3dda143104c925f573e7a7fe7c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1109278589}
     - targetCorrespondingSourceObject: {fileID: 100006, guid: c57d6b3dda143104c925f573e7a7fe7c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1109278588}
@@ -19139,11 +19134,6 @@ GameObject:
 --- !u!1 &1109278583 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: c57d6b3dda143104c925f573e7a7fe7c, type: 3}
-  m_PrefabInstance: {fileID: 1109278578}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1109278584 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: c57d6b3dda143104c925f573e7a7fe7c, type: 3}
   m_PrefabInstance: {fileID: 1109278578}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1109278585
@@ -19238,40 +19228,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!114 &1109278589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109278584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07510026f156ed446b544edebbfde108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forgeClip: {fileID: 2460798210113038985, guid: 3f48ad6aa4c7b624a880d39c6fab16d3, type: 3}
---- !u!65 &1109278590
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109278584}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.4906329, y: 0.25789022, z: 1.5093707}
-  m_Center: {x: -0.004693508, y: 0.12894511, z: 0.011997104}
 --- !u!1 &1110980482
 GameObject:
   m_ObjectHideFlags: 0
@@ -29141,7 +29097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1343763944708360, guid: ca71c53b78006d5408d2b627ed6860c3, type: 3}
       propertyPath: m_TagString
-      value: Weapon
+      value: Sword
       objectReference: {fileID: 0}
     - target: {fileID: 4464607776486608, guid: ca71c53b78006d5408d2b627ed6860c3, type: 3}
       propertyPath: m_LocalPosition.x
