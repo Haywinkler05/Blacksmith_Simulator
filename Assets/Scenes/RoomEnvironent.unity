@@ -14364,9 +14364,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 594214fa1d447b947b86a6263f5b8e3c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 766339192}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: 594214fa1d447b947b86a6263f5b8e3c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 766339193}
   m_SourcePrefab: {fileID: 100100000, guid: 594214fa1d447b947b86a6263f5b8e3c, type: 3}
 --- !u!4 &766339189 stripped
 Transform:
@@ -14400,27 +14397,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &766339193
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645401025}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.0000024, y: 0.93522966, z: 1.910965}
-  m_Center: {x: -0.000014230609, y: 0.46761322, z: 0.0133395195}
 --- !u!1 &768158253
 GameObject:
   m_ObjectHideFlags: 0
@@ -38083,11 +38059,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordPrefabs:
-  - {fileID: 112749039142944821, guid: f5669cdf18c91ac4ea0d90b3ae846346, type: 3}
-  - {fileID: 8753608209509178009, guid: 6cfbd701406829f4789193d2d63ccd60, type: 3}
-  - {fileID: 1558826111988553716, guid: b5cd1c9a752340f4ba1b180a44d9bbd0, type: 3}
-  - {fileID: 3605291644281297560, guid: 15786c4e5e96fac4c940ec70e2209421, type: 3}
-  - {fileID: 8348271538180447321, guid: dc4c8776fcdd2ce4b8fd8eaf1ff5bb26, type: 3}
+  - {fileID: 8327619086150087744, guid: 8e8f1d15771897442956ef4403ca457b, type: 3}
+  - {fileID: 8330142130623313222, guid: 2a44360287be5234fad532367b2ed9b7, type: 3}
+  - {fileID: 6859317460600791512, guid: d8bb8f62471a89f4381a5c9065451a84, type: 3}
+  - {fileID: 4910958329214097073, guid: 9250757420b5c5d41a542ef8ae6d603c, type: 3}
+  - {fileID: 886025380200085508, guid: e52183e5228b653479af2b62a6c247c3, type: 3}
   handTag: PlayerHand
   debugKey: 103
   currentSpawnedSword: {fileID: 0}

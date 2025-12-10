@@ -227,9 +227,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.04033818
-  m_Height: 0.39414155
+  m_Height: 1.4342813
   m_Direction: 1
-  m_Center: {x: 0, y: -0.12300521, z: 0}
+  m_Center: {x: 0, y: 0.3970647, z: 0}
 --- !u!54 &3091411084243699904
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -265,6 +265,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2438884742666771252}
     m_Modifications:
+    - target: {fileID: 396382070697961894, guid: 7c0578334a165804b84d9002c11ebae6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1199937214374737178, guid: 7c0578334a165804b84d9002c11ebae6, type: 3}
       propertyPath: m_LocalScale.z
       value: 38.97693
@@ -272,6 +276,10 @@ PrefabInstance:
     - target: {fileID: 1366020773392585609, guid: 7c0578334a165804b84d9002c11ebae6, type: 3}
       propertyPath: m_TagString
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801131123365611553, guid: 7c0578334a165804b84d9002c11ebae6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5879652898593113344, guid: 7c0578334a165804b84d9002c11ebae6, type: 3}
       propertyPath: m_LocalPosition.x

@@ -107,9 +107,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.04033818
-  m_Height: 0.39414155
+  m_Height: 1.4342813
   m_Direction: 1
-  m_Center: {x: 0, y: -0.12300521, z: 0}
+  m_Center: {x: 0, y: 0.3970647, z: 0}
 --- !u!54 &7316248197595437552
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -323,6 +323,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482585833122705465, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347985384905507515, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
