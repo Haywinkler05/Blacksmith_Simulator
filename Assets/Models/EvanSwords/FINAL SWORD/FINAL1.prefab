@@ -265,6 +265,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6355835313114729603}
     m_Modifications:
+    - target: {fileID: 2633229422156702951, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_TagString
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067416835604135258, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_TagString
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462825072694916880, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 36.191204
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462825072694916880, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.004
+      objectReference: {fileID: 0}
     - target: {fileID: 5185165929835691316, guid: 073f44911573de048a1879fa8a551972, type: 3}
       propertyPath: m_Name
       value: SwordBlade1
@@ -313,25 +329,60 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2633229422156702951, guid: 073f44911573de048a1879fa8a551972, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 3067416835604135258, guid: 073f44911573de048a1879fa8a551972, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3194194559294831509}
-    - targetCorrespondingSourceObject: {fileID: 2633229422156702951, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      addedObject: {fileID: 7168982496055613143}
+    - targetCorrespondingSourceObject: {fileID: 3067416835604135258, guid: 073f44911573de048a1879fa8a551972, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4783050051825331436}
+      addedObject: {fileID: 4093941431544804364}
+    - targetCorrespondingSourceObject: {fileID: 3067416835604135258, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8431199456761395871}
   m_SourcePrefab: {fileID: 100100000, guid: 073f44911573de048a1879fa8a551972, type: 3}
---- !u!1 &4138635798602363479 stripped
+--- !u!1 &3996338004516269034 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2633229422156702951, guid: 073f44911573de048a1879fa8a551972, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3067416835604135258, guid: 073f44911573de048a1879fa8a551972, type: 3}
   m_PrefabInstance: {fileID: 2153986580298684080}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &3194194559294831509
+--- !u!114 &7168982496055613143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996338004516269034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db4c00e1e081b94dbfbd19a41bbe1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hammerClip: {fileID: 2460798210113038985, guid: 65d13e16188f60f43902691966537bb9, type: 3}
+  hammerTag: Hammer
+--- !u!114 &4093941431544804364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3996338004516269034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9dc93c7e1ae142448d4a122be86ea8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 0}
+  _controller: 2
+  _loop: 0
+  _amplitude: 1
+  _frequencyShift: 0
+  _priority: 128
+--- !u!65 &8431199456761395871
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4138635798602363479}
+  m_GameObject: {fileID: 3996338004516269034}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -344,22 +395,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4595691, y: 0.04399464, z: 0.055662036}
-  m_Center: {x: -0.000338046, y: -0.000000002229517, z: 0.028587641}
---- !u!114 &4783050051825331436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4138635798602363479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db4c00e1e081b94dbfbd19a41bbe1f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hammerClip: {fileID: 2460798210113038985, guid: 65d13e16188f60f43902691966537bb9, type: 3}
-  hammerTag: Hammer
+  m_Size: {x: 0.004, y: 0.004, z: 0.028928658}
+  m_Center: {x: 0, y: -2.1100096e-16, z: 0.013366741}
 --- !u!4 &5862216932304449854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
