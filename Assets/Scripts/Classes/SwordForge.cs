@@ -23,10 +23,9 @@ public class SwordForge : MonoBehaviour
 
     private float forgeTimer = 0f;
     private int isForging;
-    private bool playerPickedUp = false;
 
     private float forgeScore = 0f;
-
+    private bool isSwordInForge = false;
 
     void Start()
     {
@@ -37,22 +36,17 @@ public class SwordForge : MonoBehaviour
             Debug.LogError("SwordForge: No renderer assigned or found!");
 
         swordRenderer.material = baseMaterial;
+
         // SAFE to access GamePhase now
         isForging = GamePhase.Instance.Forge;
     }
 
-
     void Update()
     {
-        if (isForging == 0) return;
+        if (isForging == 0 || !isSwordInForge) return;
 
         forgeTimer += Time.deltaTime;
         UpdateHeatMaterial();
-
-        if (playerPickedUp)
-        {
-            FinishForge();
-        }
     }
 
     private void UpdateHeatMaterial()
@@ -77,25 +71,16 @@ public class SwordForge : MonoBehaviour
 
     private void FinishForge()
     {
-        
         float difference = Mathf.Abs(forgeTimer - orangeTime);
         forgeScore = Mathf.Clamp(100 - (difference * penaltyPerSecond), 0, 100);
-        forgeTimer = 0;
-        GamePhase.Instance.SetPhaseSmith();
+
         Debug.Log($"Forge Score: {forgeScore} (Timer {forgeTimer:F2}s)");
+
+        forgeTimer = 0f;
+        isSwordInForge = false;
+
         GamePhase.Instance.ForgePoints += forgeScore;
-
-    }
-
-    // External call when the player grabs the sword out of the forge
-    public void OnSwordPickedUp()
-    {
-        playerPickedUp = true;
-    }
-
-    public float GetForgeScore()
-    {
-        return forgeScore;
+        GamePhase.Instance.SetPhaseSmith();
     }
 
     // Trigger entry starts the mini-game
@@ -107,12 +92,24 @@ public class SwordForge : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Forge") && isSwordInForge)
+        {
+            FinishForge();
+        }
+    }
+
     private void StartForging()
     {
         forgeTimer = 0f;
-        playerPickedUp = false;
+        isSwordInForge = true;
 
         swordRenderer.material = baseMaterial;
     }
-}
 
+    public float GetForgeScore()
+    {
+        return forgeScore;
+    }
+}

@@ -486,6 +486,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4407879014627719138, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.427
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407879014627719138, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.248
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407879014627719138, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.164
+      objectReference: {fileID: 0}
     - target: {fileID: 5185165929835691316, guid: 073f44911573de048a1879fa8a551972, type: 3}
       propertyPath: m_Name
       value: SwordBlade1
@@ -777,6 +789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Forge
       objectReference: {fileID: 0}
+    - target: {fileID: 5426944557739598026, guid: 3a466e0517f59a142aebb12fad725c9f, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8104338484306372004, guid: 3a466e0517f59a142aebb12fad725c9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.76
@@ -940,10 +956,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a332e39914e5ca846833bc465d545358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Forge: 0
+  Forge: 1
   Smith: 0
   Quench: 0
-  Grind: 1
+  Grind: 0
   ForgePoints: 0
   SmithPoints: 0
 --- !u!1 &1022137600
