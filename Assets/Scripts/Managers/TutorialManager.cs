@@ -9,7 +9,6 @@ public class TutorialManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private OrderSystem orderSystem;
-    [SerializeField] private GamePhase gameState;
 
     // Track which voice lines have already been played
     private bool hasPlayedVoiceLine = false;
@@ -45,22 +44,22 @@ public class TutorialManager : MonoBehaviour
 
         if (orderSystem.GetDayCount() == 0)
         {
-            if (gameState.Forge == 1)
+            if (GamePhase.Instance.Forge == 1)
             {
                 PlayVoiceLine(0);
                 hasPlayedVoiceLine = true;
             }
-            else if (gameState.Smith == 1)
+            else if (GamePhase.Instance.Smith == 1)
             {
                 PlayVoiceLine(1);
                 hasPlayedVoiceLine = true;
             }
-            else if (gameState.Quench == 1)
+            else if (GamePhase.Instance.Quench == 1)
             {
                 PlayVoiceLine(2);
                 hasPlayedVoiceLine = true;
             }
-            else if (gameState.Grind == 1)
+            else if (GamePhase.Instance.Grind == 1)
             {
                 PlayVoiceLine(3);
                 hasPlayedVoiceLine = true;
