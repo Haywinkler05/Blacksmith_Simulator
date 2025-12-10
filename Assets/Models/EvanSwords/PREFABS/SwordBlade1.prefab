@@ -729,17 +729,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c864b235077d11544af7d95080f92ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hammerTargetBeats: 6
-  beatWindow: 0.25
-  beatInterval: 1.2
-  perfectHitValue: 16.6
-  goodHitValue: 10
-  badHitValue: 0
+  targetHits: 6
+  minVelocity: 1.5
+  maxVelocity: 5
+  extraHitPenalty: 5
+  maxHitScore: 16.6
   audioSource: {fileID: 3403665690757705896}
-  smithingBeatTrack: {fileID: 8300000, guid: 00d5e97cfdd597f438f68e555b011933, type: 3}
+  whistleClip: {fileID: 8300000, guid: 2eb3c1d6b8e5203419c8e3f735169b2d, type: 3}
   goodHitSFX: {fileID: 8300000, guid: 472d7b103242b2d4ba20722e9bf748d2, type: 3}
   badHitSFX: {fileID: 8300000, guid: 51324cc0d4dc9f941849f513f3606f63, type: 3}
-  beatTrackDelay: 3
 --- !u!82 &3403665690757705896
 AudioSource:
   m_ObjectHideFlags: 0
