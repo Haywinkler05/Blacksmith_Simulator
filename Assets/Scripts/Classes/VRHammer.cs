@@ -16,10 +16,6 @@ public class VRHammer : MonoBehaviour
     public float minGoodVelocity = 1.5f; // Minimum velocity for a good hit
     public float minBadVelocity = 0.1f;  // Anything below this is definitely a bad hit
 
-    [Header("References")]
-    public WeaponGrabber grabber;   // <-- Drag your hammer's WeaponGrabber here
-
-
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -30,8 +26,7 @@ public class VRHammer : MonoBehaviour
         if (collision.gameObject.CompareTag(swordTag))
         {
             // Hammer velocity magnitude
-            float hammerVelocity = grabber.GetSwingVelocity();
-
+            float hammerVelocity = rb.velocity.magnitude;
 
             // Call the sword's RegisterHammerHit function
             SwordSmithing sword = collision.gameObject.GetComponent<SwordSmithing>();
