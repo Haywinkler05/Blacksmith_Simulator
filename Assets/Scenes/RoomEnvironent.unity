@@ -38059,11 +38059,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordPrefabs:
-  - {fileID: 112749039142944821, guid: f5669cdf18c91ac4ea0d90b3ae846346, type: 3}
-  - {fileID: 8753608209509178009, guid: 6cfbd701406829f4789193d2d63ccd60, type: 3}
-  - {fileID: 1558826111988553716, guid: b5cd1c9a752340f4ba1b180a44d9bbd0, type: 3}
-  - {fileID: 3605291644281297560, guid: 15786c4e5e96fac4c940ec70e2209421, type: 3}
-  - {fileID: 8348271538180447321, guid: dc4c8776fcdd2ce4b8fd8eaf1ff5bb26, type: 3}
+  - {fileID: 8327619086150087744, guid: 8e8f1d15771897442956ef4403ca457b, type: 3}
+  - {fileID: 8330142130623313222, guid: 2a44360287be5234fad532367b2ed9b7, type: 3}
+  - {fileID: 6859317460600791512, guid: d8bb8f62471a89f4381a5c9065451a84, type: 3}
+  - {fileID: 4910958329214097073, guid: 9250757420b5c5d41a542ef8ae6d603c, type: 3}
+  - {fileID: 886025380200085508, guid: e52183e5228b653479af2b62a6c247c3, type: 3}
   handTag: PlayerHand
   debugKey: 103
   currentSpawnedSword: {fileID: 0}
