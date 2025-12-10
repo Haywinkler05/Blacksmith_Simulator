@@ -18,6 +18,7 @@ TagManager:
   - RightHand
   - Forge
   - Smith
+  - PlayerHand
   layers:
   - Default
   - TransparentFX

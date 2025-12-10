@@ -1,0 +1,114 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SpawnSword : MonoBehaviour
+{
+    [Header("Settings")]
+    [Tooltip("The list of prefabs available to spawn.")]
+    public GameObject[] swordPrefabs;
+
+    [Tooltip("The tag used to identify the player's hand.")]
+    public string handTag = "PlayerHand";
+
+    [Tooltip("Key for testing in editor without VR.")]
+    public KeyCode debugKey = KeyCode.G;
+
+    private GameObject currentHand;
+    private bool isHandInside = false;
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (isHandInside && currentHand != null)
+        {
+            bool grabPressed = false;
+
+            // Hardcoded OVR Input for Quest 2/3
+            // Check Left Hand Grip
+            if ((currentHand.name.Contains("Left") || currentHand.name.Contains("LHand")) &&
+                OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
+            {
+                grabPressed = true;
+            }
+            // Check Right Hand Grip
+            else if ((currentHand.name.Contains("Right") || currentHand.name.Contains("RHand")) &&
+                     OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch))
+            {
+                grabPressed = true;
+            }
+
+            // Debug Key for testing in Editor
+            if (Input.GetKeyDown(debugKey))
+            {
+                grabPressed = true;
+            }
+
+            if (grabPressed)
+            {
+                SpawnRandomSword(currentHand);
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check if the object entering is the hand
+        if (other.CompareTag(handTag))
+        {
+            isHandInside = true;
+            currentHand = other.gameObject;
+            Debug.Log("Hand entered spawn area: " + other.name);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        // Check if the object leaving is the current hand
+        if (other.CompareTag(handTag) && other.gameObject == currentHand)
+        {
+            isHandInside = false;
+            currentHand = null;
+            Debug.Log("Hand exited spawn area.");
+        }
+    }
+
+    /// <summary>
+    /// Spawns a random sword prefab and attaches it to the specified hand.
+    /// </summary>
+    /// <param name="hand">The hand GameObject to attach the sword to.</param>
+    public void SpawnRandomSword(GameObject hand)
+    {
+        if (swordPrefabs != null && swordPrefabs.Length > 0 && hand != null)
+        {
+            int randomIndex = Random.Range(0, swordPrefabs.Length);
+            GameObject prefabToSpawn = swordPrefabs[randomIndex];
+
+            if (prefabToSpawn != null)
+            {
+                // Instantiate the prefab at the hand's position and rotation
+                GameObject spawnedSword = Instantiate(prefabToSpawn, hand.transform.position, hand.transform.rotation);
+                
+                // Parent it to the hand so it moves with it
+                spawnedSword.transform.SetParent(hand.transform);
+
+                // If the sword has a Rigidbody, set it to kinematic so it doesn't fall immediately
+                Rigidbody rb = spawnedSword.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    rb.isKinematic = true;
+                }
+
+                Debug.Log("Spawned " + spawnedSword.name + " in hand " + hand.name);
+            }
+            else
+            {
+                Debug.LogWarning("Prefab at index " + randomIndex + " is null.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Cannot spawn sword: Prefab list is empty or Hand is null.");
+        }
+    }
+}
