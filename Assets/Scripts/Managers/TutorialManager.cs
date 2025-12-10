@@ -5,6 +5,7 @@ public class TutorialManager : MonoBehaviour
     [Header("Audio Setup")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] voiceLines;
+    private int gamestage = 0;
 
     [Header("References")]
     [SerializeField] private OrderSystem orderSystem;
@@ -40,6 +41,7 @@ public class TutorialManager : MonoBehaviour
     void Update()
     {
         // Check conditions and play voice lines
+        
         CheckAndPlayVoiceLines();
     }
 
@@ -57,6 +59,7 @@ public class TutorialManager : MonoBehaviour
             if (line2 == true) return;
             PlayVoiceLine(1);
             line2 = true;
+            
         }
 
 
