@@ -3716,6 +3716,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5142df791b68d8b43976ba266e240ae1, type: 3}
   - {fileID: 8300000, guid: a725c3548c18bf74788f5dc3a1b4ce75, type: 3}
   orderSystem: {fileID: 1615817560}
+  gameState: {fileID: 166885634}
 --- !u!82 &228311920
 AudioSource:
   m_ObjectHideFlags: 0
