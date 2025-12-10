@@ -7,7 +7,7 @@ using UnityEngine;
 public class FinishSwordScript : MonoBehaviour
 {
     [SerializeField] OrderSystem complete;
-
+    [SerializeField] SpawnSword spawn;
     [SerializeField] QualityCalculator quality;
 
     [SerializeField] float score;
@@ -35,7 +35,7 @@ public class FinishSwordScript : MonoBehaviour
                 int index = complete.GetCompletedOrders();
                 int cmp = complete.GetOrderQuality(index);
                 if (cmp >= qualityCheck) {
-                    other = null;
+                    spawn.currentSpawnedSword = null;
                     complete.CompleteOrder();
                     Destroy(other.gameObject);
                     GamePhase.Instance.SetPhaseForge();
