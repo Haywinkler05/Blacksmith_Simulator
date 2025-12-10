@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class SpawnSword : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class SpawnSword : MonoBehaviour
 
     private GameObject currentHand;
     private bool isHandInside = false;
+    private bool wasGripping = false;
 
     // Update is called once per frame
     void Update()
@@ -24,18 +26,32 @@ public class SpawnSword : MonoBehaviour
         {
             bool grabPressed = false;
 
-            // Hardcoded OVR Input for Quest 2/3
-            // Check Left Hand Grip
-            if ((currentHand.name.Contains("Left") || currentHand.name.Contains("LHand")) &&
-                OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch))
+            // Determine Hand Node
+            XRNode node = XRNode.RightHand; // Default to Right
+            if (currentHand.name.Contains("Left") || currentHand.name.Contains("LHand"))
             {
-                grabPressed = true;
+                node = XRNode.LeftHand;
             }
-            // Check Right Hand Grip
-            else if ((currentHand.name.Contains("Right") || currentHand.name.Contains("RHand")) &&
-                     OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch))
+
+            // Get Input Device
+            InputDevice device = InputDevices.GetDeviceAtXRNode(node);
+            float gripValue;
+
+            // Check Grip Value (Threshold 0.5)
+            if (device.TryGetFeatureValue(CommonUsages.grip, out gripValue))
             {
-                grabPressed = true;
+                if (gripValue > 0.5f)
+                {
+                    if (!wasGripping)
+                    {
+                        grabPressed = true;
+                        wasGripping = true;
+                    }
+                }
+                else
+                {
+                    wasGripping = false;
+                }
             }
 
             // Debug Key for testing in Editor
@@ -48,6 +64,10 @@ public class SpawnSword : MonoBehaviour
             {
                 SpawnRandomSword(currentHand);
             }
+        }
+        else
+        {
+            wasGripping = false;
         }
     }
 
