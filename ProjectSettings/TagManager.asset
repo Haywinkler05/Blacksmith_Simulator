@@ -18,6 +18,7 @@ TagManager:
   - RightHand
   - Forge
   - Smith
+  - Weapon
   layers:
   - Default
   - TransparentFX
