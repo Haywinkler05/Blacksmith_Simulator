@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class UpgradeSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] PlayerMoney playerEcon;
+    [SerializeField] OrderSystem orders;
+    [SerializeField] UpgradeForge forge;
+    [SerializeField] upgradeSmithing smithing;
     void Start()
     {
         
