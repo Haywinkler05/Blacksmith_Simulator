@@ -9,14 +9,10 @@ public class TutorialManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private OrderSystem orderSystem;
-    private bool line1 = false;
-    private bool line2 = false;
-    private bool line3 = false;
-    private bool line4 = false;
-    private bool line5 = false;
-    private bool line6 = false;
+    [SerializeField] private GamePhase gameState;
 
-    private bool hasPlayedForDay = false;
+    // Track which voice lines have already been played
+    private bool hasPlayedVoiceLine = false;
 
     void Start()
     {
@@ -31,14 +27,11 @@ public class TutorialManager : MonoBehaviour
         {
             Debug.LogError("OrderSystem not assigned in Inspector!");
         }
-
-       
     }
 
     void Update()
     {
         // Check conditions and play voice lines
-        
         CheckAndPlayVoiceLines();
     }
 
@@ -47,47 +40,32 @@ public class TutorialManager : MonoBehaviour
         // Make sure we have references to the scripts
         if (orderSystem == null) return;
 
-        if ((orderSystem.GetDayCount() == 0))
+        // Only check if we haven't played a voice line yet
+        if (hasPlayedVoiceLine) return;
+
+        if (orderSystem.GetDayCount() == 0)
         {
-            if (line1 == true) return;
-            PlayVoiceLine(0);
-            line1 = true;
-
-            if (line2 == true) return;
-            PlayVoiceLine(1);
-            line2 = true;
-            
+            if (gameState.Forge == 1)
+            {
+                PlayVoiceLine(0);
+                hasPlayedVoiceLine = true;
+            }
+            else if (gameState.Smith == 1)
+            {
+                PlayVoiceLine(1);
+                hasPlayedVoiceLine = true;
+            }
+            else if (gameState.Quench == 1)
+            {
+                PlayVoiceLine(2);
+                hasPlayedVoiceLine = true;
+            }
+            else if (gameState.Grind == 1)
+            {
+                PlayVoiceLine(3);
+                hasPlayedVoiceLine = true;
+            }
         }
-
-
-        if ((orderSystem.GetDayCount() == 0) && (GamePhase.Instance.Forge == 1))
-        {
-            if (line3 == true) return;
-            PlayVoiceLine(2);
-            line3 = true;
-        }
-
-        if ((orderSystem.GetDayCount() == 0) && (GamePhase.Instance.Smith == 1))
-        {
-            if (line4 == true) return;
-            PlayVoiceLine(3);
-            line4 = true;
-        }
-
-        if ((orderSystem.GetDayCount() == 0) && (GamePhase.Instance.Quench == 1))
-        {
-            if (line5 == true) return;
-            PlayVoiceLine(4);
-            line5 = true;
-        }
-
-        if ((orderSystem.GetDayCount() == 0) && (GamePhase.Instance.Grind == 1))
-        {
-            if (line6 == true) return;
-            PlayVoiceLine(5);
-            line6 = true;
-        }
-
     }
 
     private void PlayVoiceLine(int lineIndex)
@@ -108,5 +86,12 @@ public class TutorialManager : MonoBehaviour
         {
             Debug.LogError("AudioSource or voice line clip is missing!");
         }
+    }
+
+    // Call this method when you want to reset and allow voice lines to play again
+    // For example, when moving to a new tutorial stage or new day
+    public void ResetVoiceLineFlag()
+    {
+        hasPlayedVoiceLine = false;
     }
 }
