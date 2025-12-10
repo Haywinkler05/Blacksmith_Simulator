@@ -478,75 +478,6 @@ Transform:
   - {fileID: 1817524463}
   m_Father: {fileID: 1635512943}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &588237252
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4407879014627719138, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.427
-      objectReference: {fileID: 0}
-    - target: {fileID: 4407879014627719138, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.248
-      objectReference: {fileID: 0}
-    - target: {fileID: 4407879014627719138, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.164
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185165929835691316, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_Name
-      value: SwordBlade1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.333
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.888
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.135
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5094638
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.5094638
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.49035358
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.49035358
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 2.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 073f44911573de048a1879fa8a551972, type: 3}
 --- !u!1001 &692429454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -777,6 +708,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 594214fa1d447b947b86a6263f5b8e3c, type: 3}
   m_PrefabInstance: {fileID: 921867029}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &963766513
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5185165929835691316, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_Name
+      value: SwordBlade1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.158
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.209
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.293
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.71475804
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.69937193
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5530060099879446414, guid: 073f44911573de048a1879fa8a551972, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 88.753
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 073f44911573de048a1879fa8a551972, type: 3}
 --- !u!1001 &991762140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -960,6 +948,7 @@ MonoBehaviour:
   Smith: 0
   Quench: 0
   Grind: 0
+  Finish: 0
   ForgePoints: 0
   SmithPoints: 0
 --- !u!1 &1022137600
@@ -1974,7 +1963,7 @@ SceneRoots:
   - {fileID: 1635512943}
   - {fileID: 1847466117}
   - {fileID: 1913693905}
-  - {fileID: 588237252}
   - {fileID: 993675602}
   - {fileID: 991762140}
   - {fileID: 1562787947}
+  - {fileID: 963766513}

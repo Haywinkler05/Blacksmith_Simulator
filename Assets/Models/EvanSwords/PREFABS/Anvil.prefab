@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8754870151012180462}
-  whistleClip: {fileID: 8300000, guid: 00d5e97cfdd597f438f68e555b011933, type: 3}
+  whistleClip: {fileID: 8300000, guid: 2eb3c1d6b8e5203419c8e3f735169b2d, type: 3}
 --- !u!82 &8754870151012180462
 AudioSource:
   m_ObjectHideFlags: 0

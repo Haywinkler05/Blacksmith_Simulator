@@ -375,9 +375,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c6f068c724c3de4cb03dd28219b7710, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5286039715846200316}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c6f068c724c3de4cb03dd28219b7710, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 140484702621821604}
   m_SourcePrefab: {fileID: 100100000, guid: 6c6f068c724c3de4cb03dd28219b7710, type: 3}
 --- !u!4 &122084129847931947 stripped
 Transform:
@@ -546,7 +543,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rawIronObject: {fileID: 396382070697961894}
   finishedSwordObject: {fileID: 3801131123365611553}
-  steamParticles: {fileID: 0}
   swordBender: {fileID: 3119022468408482113}
   swordBurn: {fileID: 5068458947133565521}
   quenchTime: 2
@@ -566,107 +562,11 @@ MonoBehaviour:
   minVelocity: 1.5
   maxVelocity: 5
   extraHitPenalty: 5
+  smithDuration: 30
   maxHitScore: 10
-  audioSource: {fileID: 140484702621821604}
-  whistleClip: {fileID: 8300000, guid: 2eb3c1d6b8e5203419c8e3f735169b2d, type: 3}
+  audioSource: {fileID: 0}
   goodHitSFX: {fileID: 8300000, guid: 472d7b103242b2d4ba20722e9bf748d2, type: 3}
   badHitSFX: {fileID: 8300000, guid: 51324cc0d4dc9f941849f513f3606f63, type: 3}
---- !u!82 &140484702621821604
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6544690700457172922}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &7200967003476830829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3890257973448788102, guid: 6c6f068c724c3de4cb03dd28219b7710, type: 3}
