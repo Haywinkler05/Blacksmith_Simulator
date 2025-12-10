@@ -326,9 +326,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e87d6f28d49dc6443959f210c80db5dd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7460405177930781732}
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
   m_SourcePrefab: {fileID: 100100000, guid: e87d6f28d49dc6443959f210c80db5dd, type: 3}
 --- !u!4 &3056538083473130947 stripped
@@ -475,19 +472,11 @@ MonoBehaviour:
   smithDuration: 30
   maxHitScore: 10
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   audioSource: {fileID: 0}
   goodHitSFX: {fileID: 8300000, guid: 472d7b103242b2d4ba20722e9bf748d2, type: 3}
   badHitSFX: {fileID: 8300000, guid: 51324cc0d4dc9f941849f513f3606f63, type: 3}
 --- !u!114 &5112627395394705387
 MonoBehaviour:
-=======
-  audioSource: {fileID: 3403665690757705896}
-  goodHitSFX: {fileID: 8300000, guid: 472d7b103242b2d4ba20722e9bf748d2, type: 3}
-  badHitSFX: {fileID: 8300000, guid: 51324cc0d4dc9f941849f513f3606f63, type: 3}
---- !u!65 &7460405177930781732
-BoxCollider:
->>>>>>> Stashed changes
 =======
   audioSource: {fileID: 3403665690757705896}
   goodHitSFX: {fileID: 8300000, guid: 472d7b103242b2d4ba20722e9bf748d2, type: 3}
@@ -501,7 +490,6 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5185165929835691316}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 490e61972802a7a4eb53dd23d340f81c, type: 3}
@@ -512,8 +500,6 @@ BoxCollider:
   rebendThreshold: 10
   swordBender: {fileID: 3634494808574751484}
 =======
-=======
->>>>>>> Stashed changes
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -528,9 +514,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.18321729, y: 1.0382003, z: 0.07428099}
   m_Center: {x: -0.009498024, y: 0.5850188, z: -0.005784638}
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
 --- !u!4 &5530060099879446414 stripped
 Transform:

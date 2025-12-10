@@ -545,12 +545,9 @@ GameObject:
   - component: {fileID: 8319809068734934476}
   - component: {fileID: 4497002187459783429}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   - component: {fileID: 5426944557739598026}
   - component: {fileID: 3131253125494064830}
   - component: {fileID: 16069175689654179}
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   m_Layer: 0
@@ -626,7 +623,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!65 &5426944557739598026
 BoxCollider:
@@ -766,8 +762,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!1 &5589405547546154712

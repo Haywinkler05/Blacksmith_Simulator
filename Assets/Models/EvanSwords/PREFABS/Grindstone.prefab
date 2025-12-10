@@ -235,11 +235,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8375695456316572209, guid: 74b578701e38f1b4ba1ee458cac91762, type: 3}
       insertIndex: -1
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
       addedObject: {fileID: 4569540984368196709}
-=======
-      addedObject: {fileID: 6528560161585413548}
->>>>>>> Stashed changes
 =======
       addedObject: {fileID: 6528560161585413548}
 >>>>>>> Stashed changes
@@ -302,16 +298,12 @@ Rigidbody:
   grindParticles: {fileID: 515408117430921674, guid: 45bc9744aef63d24f95e6bfa55009203, type: 3}
 --- !u!114 &6528560161585413548
 MonoBehaviour:
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8812483323158705469}
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   serializedVersion: 4
   m_Mass: 1
@@ -334,8 +326,6 @@ MonoBehaviour:
   m_Constraints: 0
   m_CollisionDetection: 0
 =======
-=======
->>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c1af08247e15d645a07b05c02239243, type: 3}
@@ -343,7 +333,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grindClip: {fileID: 2460798210113038985, guid: 9fd6b422f60350647b9d2d1a085e8318, type: 3}
   swordTag: Sword
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
