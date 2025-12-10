@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 8319809068734934476}
   - component: {fileID: 4497002187459783429}
   - component: {fileID: 5426944557739598026}
+  - component: {fileID: 3131253125494064830}
   m_Layer: 0
   m_Name: Forge
   m_TagString: Forge
@@ -603,6 +604,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.000001, y: 1.2406985, z: 2}
   m_Center: {x: -0.00000023841858, y: 0.6203492, z: -0.0000011920929}
+--- !u!114 &3131253125494064830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4372960379045214972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f87f16f5096b64695c1d4991504375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forgeLights:
+  - {fileID: 933870210172600046}
+  - {fileID: 7008645643231219048}
+  - {fileID: 2597680679893379655}
+  - {fileID: 8012483073707570381}
+  - {fileID: 7326551560412617064}
+  fadeSpeed: 2
 --- !u!1 &5589405547546154712
 GameObject:
   m_ObjectHideFlags: 0
