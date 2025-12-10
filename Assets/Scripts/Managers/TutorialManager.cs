@@ -32,10 +32,7 @@ public class TutorialManager : MonoBehaviour
             Debug.LogError("OrderSystem not assigned in Inspector!");
         }
 
-        if (gamePhase == null)
-        {
-            Debug.LogError("GamePhase not assigned in Inspector!");
-        }
+       
     }
 
     void Update()
@@ -48,7 +45,7 @@ public class TutorialManager : MonoBehaviour
     public void CheckAndPlayVoiceLines()
     {
         // Make sure we have references to the scripts
-        if (orderSystem == null || gamePhase == null) return;
+        if (orderSystem == null) return;
 
         if ((orderSystem.GetDayCount() == 0))
         {
