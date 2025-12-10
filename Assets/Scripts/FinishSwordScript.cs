@@ -34,7 +34,7 @@ public class FinishSwordScript : MonoBehaviour
                 int qualityCheck = quality.qualityLookup(score);
                 int index = complete.GetCompletedOrders();
                 int cmp = complete.GetOrderQuality(index);
-                if (cmp >= qualityCheck) {
+                if (cmp <= qualityCheck) {
                     complete.CompleteOrder();
                     spawn.currentSpawnedSword = null;
                     Destroy(other.gameObject);
