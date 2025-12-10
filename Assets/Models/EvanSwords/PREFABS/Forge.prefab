@@ -188,8 +188,6 @@ GameObject:
   - component: {fileID: 6738881230964679088}
   - component: {fileID: 6756427068602866636}
   - component: {fileID: 6421075028287420613}
-  - component: {fileID: 6901502835337885818}
-  - component: {fileID: 4966838567932181785}
   m_Layer: 0
   m_Name: fi_vil_forge_coals_lit
   m_TagString: Untagged
@@ -263,40 +261,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6901502835337885818
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984723374706689605}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.4906329, y: 0.25789022, z: 1.5093707}
-  m_Center: {x: -0.004693508, y: 0.12894511, z: 0.011997104}
---- !u!114 &4966838567932181785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984723374706689605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07510026f156ed446b544edebbfde108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forgeClip: {fileID: 2460798210113038985, guid: 66d0557c54fc9ba4ab6225619694f410, type: 3}
 --- !u!1 &2367361609140309845
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,12 +508,9 @@ GameObject:
   - component: {fileID: 8104338484306372004}
   - component: {fileID: 8319809068734934476}
   - component: {fileID: 4497002187459783429}
-<<<<<<< Updated upstream
   - component: {fileID: 5426944557739598026}
   - component: {fileID: 3131253125494064830}
   - component: {fileID: 16069175689654179}
-=======
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Forge
   m_TagString: Forge
@@ -623,7 +584,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!65 &5426944557739598026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -762,8 +722,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-=======
->>>>>>> Stashed changes
 --- !u!1 &5589405547546154712
 GameObject:
   m_ObjectHideFlags: 0

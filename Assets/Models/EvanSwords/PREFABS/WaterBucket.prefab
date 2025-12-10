@@ -123,7 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quenchClip: {fileID: 2460798210113038985, guid: d80257baad26e2243ba1f715b0974889, type: 3}
   weaponTag: Sword
-<<<<<<< Updated upstream
 --- !u!114 &2764327471328029699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,8 +136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steamParticles: {fileID: 0}
-=======
->>>>>>> Stashed changes
 --- !u!1 &6803307906779356300
 GameObject:
   m_ObjectHideFlags: 0

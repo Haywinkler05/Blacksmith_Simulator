@@ -18,13 +18,9 @@ TagManager:
   - RightHand
   - Forge
   - Smith
-<<<<<<< Updated upstream
   - PlayerHand
   - GrindStone
   - Sell
-=======
-  - Hammer
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
