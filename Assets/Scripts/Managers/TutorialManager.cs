@@ -8,7 +8,6 @@ public class TutorialManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private OrderSystem orderSystem;
-    [SerializeField] private GamePhase gamePhase;
     private bool line1 = false;
     private bool line2 = false;
     private bool line3 = false;
@@ -61,28 +60,28 @@ public class TutorialManager : MonoBehaviour
         }
 
 
-        if ((orderSystem.GetDayCount() == 0) && (gamePhase.Forge == 1))
+        if ((orderSystem.GetDayCount() == 0) && (GamePhase.Instance.Forge == 1))
         {
             if (line3 == true) return;
             PlayVoiceLine(2);
             line3 = true;
         }
 
-        if ((orderSystem.GetDayCount() == 0) && (gamePhase.Smith == 1))
+        if ((orderSystem.GetDayCount() == 0) && (GamePhase.Instance.Smith == 1))
         {
             if (line4 == true) return;
             PlayVoiceLine(3);
             line4 = true;
         }
 
-        if ((orderSystem.GetDayCount() == 0) && (gamePhase.Quench == 1))
+        if ((orderSystem.GetDayCount() == 0) && (GamePhase.Instance.Quench == 1))
         {
             if (line5 == true) return;
             PlayVoiceLine(4);
             line5 = true;
         }
 
-        if ((orderSystem.GetDayCount() == 0) && (gamePhase.Grind == 1))
+        if ((orderSystem.GetDayCount() == 0) && (GamePhase.Instance.Grind == 1))
         {
             if (line6 == true) return;
             PlayVoiceLine(5);
