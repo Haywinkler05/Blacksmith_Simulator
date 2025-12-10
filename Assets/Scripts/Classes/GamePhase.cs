@@ -12,6 +12,7 @@ public class GamePhase : MonoBehaviour
     public int Smith = 0;
     public int Quench = 0;
     public int Grind = 0;
+    public int Finish = 0;
 
     public float ForgePoints = 0;
     public float SmithPoints = 0;
@@ -37,6 +38,7 @@ public class GamePhase : MonoBehaviour
     public void SetPhaseSmith() { ResetPhases(); Smith = 1; }
     public void SetPhaseQuench() { ResetPhases(); Quench = 1; }
     public void SetPhaseGrind() { ResetPhases(); Grind = 1; }
+    public void SetPhaseFinish() { ResetPhases(); Finish = 1; }
 
     // Optionally: Serialize events later if needed
 }

@@ -1,61 +1,58 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class SwordQuenchable : MonoBehaviour
 {
     [Header("References")]
-    public GameObject rawIronObject;        // The pre-sword iron bar
-    public GameObject finishedSwordObject;  // The sword mesh that shows after quenching
-    public ParticleSystem steamParticles;
+    public GameObject rawIronObject;        // Before transformation
+    public GameObject finishedSwordObject;  // After transformation
 
-    public SwordBender swordBender;         // Bending script
-    public SwordBurn swordBurn;             // Burn/material script
-    private StateMachine stateMachine;       // So we can notify the game flow
+    public SwordBender swordBender;         // Bending logic
+    public SwordBurn swordBurn;             // Burn/material logic
 
     [Header("Settings")]
-    public float quenchTime = 2f;           // Time spent in water before transformation
+    public float quenchTime = 2f;           // Time spent in water
 
     private bool isQuenching = false;
 
-    void Awake()
+    public void TryBeginQuench()
     {
-        stateMachine = FindObjectOfType<StateMachine>();
-    }
+        // Only quench if global state says we are in the quench phase
+        if (GamePhase.Instance.Quench != 1)
+            return;
 
-
-    public void BeginQuench(int finalQualityScore)
-    {
         if (isQuenching) return;
 
-        StartCoroutine(QuenchRoutine(finalQualityScore));
+        float forge = GamePhase.Instance.ForgePoints;
+        float smith = GamePhase.Instance.SmithPoints;
+
+        StartCoroutine(QuenchRoutine(forge, smith));
+
+        GamePhase.Instance.SetPhaseGrind();
     }
 
-    private IEnumerator QuenchRoutine(int finalQuality)
+    private IEnumerator QuenchRoutine(float f, float s)
     {
         isQuenching = true;
 
-        // Play steam effect
-        if (steamParticles != null)
-            steamParticles.Play();
 
-        // Wait inside the water
+        // Wait inside water
         yield return new WaitForSeconds(quenchTime);
 
-        // Hide the iron bar, show the sword
-        if (rawIronObject != null) rawIronObject.SetActive(false);
-        if (finishedSwordObject != null) finishedSwordObject.SetActive(true);
+        // Switch iron → sword
+        if (rawIronObject != null)
+            rawIronObject.SetActive(false);
 
-        // Apply bending + burn
+        if (finishedSwordObject != null)
+            finishedSwordObject.SetActive(true);
+
+        // Apply bending based on combined forge + smith errors
         if (swordBender != null)
-            swordBender.ApplyBendsFromScore(finalQuality);
+            swordBender.ApplyBendsFromScore((int)s);
 
+        // Apply burning char based on total heat mismanagement
         if (swordBurn != null)
-            swordBurn.ApplyBurnFromScore(finalQuality);
-
-        // Notify state machine that quenching is done
-        if (stateMachine != null)
-            stateMachine.CompleteCurrentStage(finalQuality);
+            swordBurn.ApplyBurnFromScore((int)f);
 
         isQuenching = false;
     }
