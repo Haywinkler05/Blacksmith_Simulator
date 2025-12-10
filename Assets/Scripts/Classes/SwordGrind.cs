@@ -6,7 +6,7 @@ public class SwordGrind : MonoBehaviour
     [Header("Grinding Settings")]
     public float grindDuration = 6f;         // Grind time after first touch
     public float smithGainPerSecond = 5f;    // How many smith points added per second
-    public float rebendThreshold = 20f;      // Rebend after every +20 points
+    public float rebendThreshold = 10f;      // Rebend after every +20 points
 
     [Header("References")]
     public SwordBender swordBender;          // ApplyBendsFromScore()

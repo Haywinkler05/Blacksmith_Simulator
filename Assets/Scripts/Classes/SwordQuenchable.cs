@@ -28,7 +28,7 @@ public class SwordQuenchable : MonoBehaviour
 
         StartCoroutine(QuenchRoutine(forge, smith));
 
-        GamePhase.Instance.SetPhaseGrind();
+        
     }
 
     private IEnumerator QuenchRoutine(float f, float s)
@@ -55,5 +55,6 @@ public class SwordQuenchable : MonoBehaviour
             swordBurn.ApplyBurnFromScore((int)f);
 
         isQuenching = false;
+        GamePhase.Instance.SetPhaseGrind();
     }
 }

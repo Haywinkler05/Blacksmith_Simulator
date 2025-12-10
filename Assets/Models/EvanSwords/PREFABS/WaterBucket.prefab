@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5027149198193985364}
   - component: {fileID: 5684960074378570482}
   - component: {fileID: 4451089436782452795}
+  - component: {fileID: 2764327471328029699}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -121,7 +122,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quenchClip: {fileID: 2460798210113038985, guid: d80257baad26e2243ba1f715b0974889, type: 3}
-  weaponTag: Weapon
+  weaponTag: Sword
+--- !u!114 &2764327471328029699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617623836290741107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb34fb9f788dbe043ba0c9e9b85a46fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steamParticles: {fileID: 0}
 --- !u!1 &6803307906779356300
 GameObject:
   m_ObjectHideFlags: 0
